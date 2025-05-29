@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Priyanka Gandhi A</title>
+
+    <!-- Optional: Tailwind config for custom colors if needed -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#edafb8',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Typing Animation -->
+    <style>
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink {
+        0%, 100% { border-color: transparent; }
+        50% { border-color: black; }
+      }
+      .animate-typing {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid black;
+        animation: typing 3s steps(30, end) forwards, blink 0.75s step-end 4;
+      }
+    </style>
+  </head>
+  <body class="bg-primary text-white min-h-screen">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
