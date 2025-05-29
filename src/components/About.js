@@ -7,7 +7,7 @@ function About() {
     threshold: 0.2,
   });
 
-  const skills = ['React', 'Tailwind CSS', 'JavaScript', 'AI Integration', 'Responsive Design'];
+  const skills = ['Python', 'C', 'React.js', 'Google Cloud Platform (GCP)', 'Artificial Intelligence (AI)'];
 
   return (
     <section
@@ -38,10 +38,9 @@ function About() {
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-5 border-b-4 border-pink-500 inline-block pb-2 transform transition duration-700 ease-in-out scale-100 hover:scale-105">
           About Me
         </h2>
-        <p className="text-base sm:text-lg text-gray-800 leading-relaxed tracking-wide mb-6">
+        <p className="text-base sm:text-lg text-gray-800 leading-relaxed tracking-wide mb-6 text-justify">
           Hi there! I’m <span className="font-semibold text-pink-600">Priyanka Gandhi A</span>.  
-          I’m passionate about building user-friendly web apps that blend AI and modern technologies to solve real-world problems.  
-          Curious, driven, and always learning, I enjoy crafting intuitive experiences that make life easier.
+          I’m passionate about building user-friendly applications that combine creativity and technology to solve real-world problems. I'm curious, driven, and always eager to learn something new. I love crafting intuitive experiences that make everyday life a little easier and more meaningful
         </p>
 
         {/* Skills */}
@@ -59,10 +58,12 @@ function About() {
 
         {/* Button for CV Download */}
         <a
-          href="/resume.pdf"
-          download
+          href="https://drive.google.com/file/d/1J4zNEKaOVbuwGYtyqcJ0Jbd3hm-wqwIL/view?usp=sharing"
           className="block w-full sm:inline-block sm:w-auto px-6 py-2 text-white font-medium bg-pink-600 rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition text-center"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Download Resume"
+          title="Download Resume from Google Drive"
         >
           📄 Download CV
         </a>

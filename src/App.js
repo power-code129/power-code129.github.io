@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -10,10 +10,11 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import MoreWorks from './components/MoreWorks';
 import Contact from './components/Contact';
-import OtherSkills from './components/OtherSkills';  // <-- Import here
+import OtherSkills from './components/OtherSkills';
 
 function ScrollHandler() {
   const location = useLocation();
+  const navigate = useNavigate();
   const isFirstLoad = useRef(true);
 
   useEffect(() => {
@@ -21,19 +22,20 @@ function ScrollHandler() {
       isFirstLoad.current = false;
       requestAnimationFrame(() => {
         const heroEl = document.getElementById('hero');
-        if (heroEl) {
-          heroEl.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (heroEl) heroEl.scrollIntoView({ behavior: 'smooth' });
       });
       return;
     }
+
     if (location.state?.scrollTo) {
       const target = document.getElementById(location.state.scrollTo);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
+        // Clear scrollTo after scroll to prevent repeated scroll on re-renders
+        navigate(location.pathname, { replace: true, state: {} });
       }
     }
-  }, [location]);
+  }, [location, navigate]);
 
   return null;
 }
@@ -61,7 +63,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/more-works" element={<MoreWorks />} />
-          <Route path="/other-skills" element={<OtherSkills />} />  {/* Add this */}
+          <Route path="/other-skills" element={<OtherSkills />} />
         </Routes>
       </div>
     </Router>

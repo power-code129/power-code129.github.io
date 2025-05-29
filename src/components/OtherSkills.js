@@ -71,7 +71,7 @@ function OtherSkills() {
           onClick={handleBackClick}
           className="inline-block bg-green-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg transition"
         >
-          ← Back to Preferred Skills
+          ← Back to Passion & Preferred Skills
         </button>
       </div>
     </div>

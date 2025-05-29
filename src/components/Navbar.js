@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
 
 const formatSectionName = (name) =>
@@ -10,6 +10,7 @@ const formatSectionName = (name) =>
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(() =>
     localStorage.getItem('theme') === 'dark'
@@ -32,8 +33,10 @@ const Navbar = () => {
   const handleScroll = (id) => {
     setMenuOpen(false);
     if (location.pathname !== '/') {
-      window.location.href = `/#${id}`;
+      // Navigate to home and pass scroll target in state
+      navigate('/', { state: { scrollTo: id } });
     } else {
+      // On home, scroll directly
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -55,27 +58,22 @@ const Navbar = () => {
 
         {/* Desktop menu */}
         <ul className="hidden md:flex space-x-6 text-sm font-medium">
-          {[
-            'about',
-            'passion',
-            'performance',
-            'experience',
-            'projects',
-            'contact',
-          ].map((section) => (
-            <li key={section}>
-              <a
-                href={`#${section}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScroll(section);
-                }}
-                className="hover:text-pink-700 transition-colors duration-300"
-              >
-                {formatSectionName(section)}
-              </a>
-            </li>
-          ))}
+          {['about', 'passion', 'performance', 'experience', 'projects', 'contact'].map(
+            (section) => (
+              <li key={section}>
+                <a
+                  href={`#${section}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScroll(section);
+                  }}
+                  className="hover:text-pink-700 transition-colors duration-300"
+                >
+                  {formatSectionName(section)}
+                </a>
+              </li>
+            )
+          )}
           <li>
             <button
               onClick={() => setDarkMode(!darkMode)}
@@ -101,27 +99,22 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 backdrop-blur-md px-6 py-6 shadow-lg">
           <ul className="flex flex-col space-y-6 text-lg font-medium text-black dark:text-white">
-            {[
-              'about',
-              'passion',
-              'performance',
-              'experience',
-              'projects',
-              'contact',
-            ].map((section) => (
-              <li key={section}>
-                <a
-                  href={`#${section}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleScroll(section);
-                  }}
-                  className="hover:text-pink-700 transition-colors duration-300"
-                >
-                  {formatSectionName(section)}
-                </a>
-              </li>
-            ))}
+            {['about', 'passion', 'performance', 'experience', 'projects', 'contact'].map(
+              (section) => (
+                <li key={section}>
+                  <a
+                    href={`#${section}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleScroll(section);
+                    }}
+                    className="hover:text-pink-700 transition-colors duration-300"
+                  >
+                    {formatSectionName(section)}
+                  </a>
+                </li>
+              )
+            )}
             <li>
               <button
                 onClick={() => {

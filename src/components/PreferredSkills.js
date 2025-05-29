@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FaCertificate } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -8,8 +8,9 @@ function PreferredSkills() {
 
   const passionAreas = {
     Languages: [
-      { name: 'C', certificate: '/certificates/c-cert.pdf' },
+      { name: 'C' },
       'Python',
+      'C++',
       'C#',
       'JavaScript',
       'HTML',
@@ -35,6 +36,7 @@ function PreferredSkills() {
       'Graphic Design',
       'Digital Marketing',
       'Adobe Photoshop',
+      'Canva',
       'Git',
       'GitHub',
       'VS Code',
@@ -53,27 +55,35 @@ function PreferredSkills() {
       'Communication & Professional Services',
       'Data Analytics',
       'Frontend Dev',
+      'Internet of Things (IoT)',
     ],
   };
 
-  // Certificates mapping (for example purpose, add actual paths)
+  // Certificates hosted on Google Drive (replace FILE_IDs)
   const certificates = {
-    'C': '/certificates/c-cert.pdf',
-    'C#': '/certificates/csharp-cert.pdf',
-    'Python': '/certificates/python-cert.pdf',
-    'React.js': '/certificates/react-cert.pdf',
-    'Cloud Computing': '/certificates/cloud-computing-cert.pdf',
-    'AWS Elastic Beanstalk': '/certificates/aws-eb-cert.pdf',
-    'Graphic Design': '/certificates/graphic-design-cert.pdf',
-    'Adobe Photoshop': '/certificates/photoshop-cert.pdf',
-    'Project Management': '/certificates/project-management-cert.pdf',
-    'Machine Learning': '/certificates/ml-cert.pdf',
+    'Adobe Photoshop':'https://drive.google.com/file/d/1wiDuPBzTB4USd2VvvkXbSmmihsP3zslh/view?usp=drive_link',
+    'Algorithms':'https://drive.google.com/file/d/1zGYg3AZ3aoSdiIO-PQH_4y6E1KuuuGOu/view?usp=drive_link',
+    'Artificial Intelligence (AI)': 'https://drive.google.com/file/d/17M47HMogAkgYIMYdYhM9zD6q8HJI5Irv/view?usp=drive_link',
+    'AWS Elastic Beanstalk': 'https://drive.google.com/file/d/1FTPPPFKd_ME9IoY_1Auwn4mPWfuh2ExN/view?usp=drive_link',
+    'C': 'https://drive.google.com/file/d/1YhkT4UkFBCVxPOzTricLj4MVDa_vEqdi/view?usp=drive_link',
+    'C++': 'https://drive.google.com/file/d/1BAClS53vc6QDLYvolizgvhMLXQ73q4H5/view?usp=drive_link',
+    'Cloud Computing': 'https://drive.google.com/file/d/1axeHc-spiDhtV2KGEPW9WhW5JP2IjhuQ/view?usp=sharing',
+    'Cloud Security': 'https://drive.google.com/file/d/1AJPWeSBuIB4bFzmDHKRsEus0O2XkU8VV/view?usp=drive_link',
+    'Communication & Professional Services': 'https://drive.google.com/file/d/1PmOvNCw6ixBi8vKTc1eBM1mnx9Y64zTS/view?usp=drive_link',
+    'Data Analytics': 'https://drive.google.com/file/d/1MWBxAUgcpykzgfm7gL85H-hKKX5vIqDo/view?usp=drive_link',
+    'Digital Marketing': 'https://drive.google.com/file/d/1CtVADtF3v-x_UzyHetL-au3w6YsuoRdy/view?usp=drive_link',
+    'ESG (Environmental, Social, Governance)': 'https://drive.google.com/file/d/1Ho-Vp67XpOKTmxGIDkQ2JTCAaipdRbQF/view?usp=drive_link',
+    'Generative AI': 'https://drive.google.com/file/d/1hqsubb84oIx9Zq2hNxVgkdHvzsTNEsAK/view?usp=drive_link',
+    'Internet of Things (IoT)': 'https://drive.google.com/file/d/1JabXYvuB-msjHYf1vlXvhQ9OsxmSkse2/view?usp=sharing',
+    'Machine Learning': 'https://drive.google.com/file/d/114dfQKL4e3Zn9luDAl7aRHA41CADF6bE/view?usp=drive_link',
+    'Python': 'https://drive.google.com/file/d/1Ahw4nUee0sNXrso-hzNd1UCxAJt9qWpI/view?usp=drive_link',
+    'RESTful Web Services (REST)':'https://drive.google.com/file/d/14fws0hZZy59ZWnqf86fYaFhtrH0ZkHXN/view?usp=drive_link',
   };
 
   return (
     <section
       ref={ref}
-      id="preferred-skills"
+      id="passion"
       className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 my-10 transition-all duration-1000 ${
         inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
