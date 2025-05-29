@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaCloud, FaCode, FaTools, FaProjectDiagram, FaCogs, FaMicrochip, FaDatabase, FaPaintBrush, FaRobot, FaUsers } from 'react-icons/fa';
+import { FaCloud, FaCode, FaTools, FaProjectDiagram, FaMicrochip, FaDatabase, FaPaintBrush, FaRobot, FaUsers } from 'react-icons/fa';
 
 const skills = {
   Languages: ['C', 'C++', 'C#', 'Python', 'JavaScript', 'HTML', 'Verilog', 'VHDL', 'Embedded C', 'Assembly Language'],

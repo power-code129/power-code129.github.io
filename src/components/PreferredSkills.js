@@ -10,7 +10,7 @@ function PreferredSkills() {
     Languages: [
       { name: 'C', certificate: '/certificates/c-cert.pdf' },
       'Python',
-      ,'C#',
+      'C#',
       'JavaScript',
       'HTML',
       'Verilog',
