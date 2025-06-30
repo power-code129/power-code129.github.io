@@ -1,44 +1,44 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FaHackerrank, FaGoogle, FaMicrosoft } from 'react-icons/fa';
-import { SiGeeksforgeeks, SiLeetcode, SiCoursera } from 'react-icons/si';
+import { SiGeeksforgeeks, SiLeetcode, SiCoursera, SiInfosys } from 'react-icons/si';
 
 const platforms = [
   {
     name: 'LeetCode',
     icon: <SiLeetcode size={40} className="text-yellow-400" />,
-    stats: 'Solved 120+ problems',
-    link: 'https://leetcode.com/',
+    stats: 'Solved 40+ problems, Ongoing learning',
+    link: 'https://leetcode.com/u/Priyankagandhi2004/',
   },
   {
     name: 'GeeksforGeeks',
     icon: <SiGeeksforgeeks size={40} className="text-green-600" />,
-    stats: 'Solved 90+ problems',
-    link: 'https://auth.geeksforgeeks.org/',
+    stats: 'Solved 90+ problems, Ongoing learning',
+    link: 'https://www.geeksforgeeks.org/user/2004apge5lk/?_gl=1*1vom4uu*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjwyIPDBhDBARIsAHJyyVhv9e6H6bifd5nVjL7i5hG8TZcYvafkP3SV9iqIWQJE1puxfzqvL6YaAl5QEALw_wcB&gbraid=0AAAAAC9yBkB1GX6FZygGquVN-L_R5sGou',
   },
   {
     name: 'HackerRank',
     icon: <FaHackerrank size={40} className="text-green-500" />,
-    stats: 'Solved 100+ problems',
-    link: 'https://www.hackerrank.com/',
+    stats: 'Solved 10+ problems, Ongoing learning',
+    link: 'https://www.hackerrank.com/2004apgandhi/',
   },
   {
     name: 'Google Cloud Skill Boost',
     icon: <FaGoogle size={40} className="text-yellow-500" />,
-    stats: 'Completed 100+ labs',
-    link: 'https://www.cloudskillsboost.google/',
+    stats: 'Completed 100+ labs,Ongoing learning',
+    link: 'https://www.cloudskillsboost.google/public_profiles/c1244eea-6016-4936-ba5d-4e7178e6f8cd',
   },
   {
     name: 'Microsoft Learn',
     icon: <FaMicrosoft size={40} className="text-blue-500" />,
-    stats: 'Level: Intermediate',
-    link: 'https://learn.microsoft.com/',
+    stats: 'Level: 9,Ongoing learning',
+    link: 'https://learn.microsoft.com/en-us/users/priyankagandhiarokiaselvaraj-9521/achievements',
   },
   {
-    name: 'Coursera',
-    icon: <SiCoursera size={40} className="text-blue-400" />,
-    stats: 'Completed 12+ courses',
-    link: 'https://www.coursera.org/',
+    name: 'Infosys Springboard',
+    icon: <SiInfosys size={40} className="text-blue-400" />,
+    stats: 'Ongoing learning',
+    link: 'https://infyspringboard.onwingspan.com/web/en/app/profile/dashboard',
   },
 ];
 
