@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { FaHackerrank, FaGoogle, FaMicrosoft } from 'react-icons/fa';
-import { SiGeeksforgeeks, SiLeetcode, SiCoursera, SiInfosys } from 'react-icons/si';
+import { SiGeeksforgeeks, SiLeetcode, SiInfosys } from 'react-icons/si';
 
 const platforms = [
   {
