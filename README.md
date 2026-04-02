@@ -1,4 +1,4 @@
-# 👋 Hi, I’m Priyanka Gandhi.A (@power-code129)
+# 👋 Hi, I’m Priyanka Gandhi.A (@power-code129) updated version
 
 - 👀 I’m interested in electronics, communication systems, and machine learning  
 - 🌱 Currently learning advanced signal processing, pulse modulation, coding theory, and digital carrier modulation  
