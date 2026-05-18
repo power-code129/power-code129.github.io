@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyanka Gandhi A — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --p1:#7c3aed;--p2:#a855f7;--p3:#c084fc;--p4:#e879f9;
+  --acc:#f0abfc;--cyan:#22d3ee;--pink:#f472b6;--green:#34d399;--orange:#fb923c;
+  --bg:#07040f;--bg2:#0e0920;--bg3:#150d2e;
+  --card:rgba(124,58,237,.09);--border:rgba(168,85,247,.22);
+  --text:#f0ecff;--muted:#9d86c0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* CURSOR */
+#cur{width:10px;height:10px;background:var(--p2);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;will-change:transform;transition:width .15s,height .15s,background .2s;}
+#cur-ring{width:32px;height:32px;border:1.5px solid var(--p3);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;will-change:transform;transition:border-color .2s;}
+
+/* BLOBS */
+.blob{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:0;}
+.b1{width:460px;height:460px;background:rgba(124,58,237,.15);top:-100px;left:-80px;animation:bf 9s ease-in-out infinite;}
+.b2{width:360px;height:360px;background:rgba(232,121,249,.1);top:35%;right:-70px;animation:bf 9s ease-in-out infinite 3s;}
+.b3{width:300px;height:300px;background:rgba(34,211,238,.07);bottom:8%;left:22%;animation:bf 9s ease-in-out infinite 6s;}
+@keyframes bf{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:15px 52px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,4,15,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;background:linear-gradient(135deg,var(--p2),var(--p4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-links{display:flex;gap:26px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .25s;}
+.nav-links a:hover{color:var(--acc);}
+
+/* WRAP */
+section{position:relative;z-index:1;}
+.wrap{max-width:1140px;margin:0 auto;padding:88px 52px;}
+.sec-label{display:flex;align-items:center;gap:9px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--p3);margin-bottom:10px;}
+.sec-label::before{content:'';width:26px;height:1px;background:linear-gradient(90deg,var(--p2),transparent);}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:48px;}
+.hl{background:linear-gradient(135deg,var(--p2),var(--p4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
+.rev.on{opacity:1;transform:none;}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:126px 52px 56px;background:radial-gradient(ellipse 80% 60% at 18% 40%,rgba(124,58,237,.13) 0%,transparent 70%);}
+.hero-inner{max-width:1140px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.tag{display:inline-flex;align-items:center;gap:7px;background:rgba(124,58,237,.13);border:1px solid var(--border);padding:5px 14px;border-radius:100px;font-size:.72rem;color:var(--p3);letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px;}
+.tag-dot{width:6px;height:6px;background:var(--p3);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+
+/* Oracle badge on hero */
+.oracle-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,rgba(255,107,0,.15),rgba(255,107,0,.08));
+  border:1px solid rgba(255,107,0,.4);
+  padding:6px 14px;border-radius:100px;
+  font-size:.72rem;font-weight:600;color:#ff6b00;
+  margin-bottom:16px;margin-left:8px;
+  animation:oraGlow 2.5s ease-in-out infinite;
+}
+@keyframes oraGlow{0%,100%{box-shadow:0 0 8px rgba(255,107,0,.2)}50%{box-shadow:0 0 22px rgba(255,107,0,.5)}}
+.oracle-badge .ora-ico{font-size:1rem;}
+
+.hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;}
+.hero-name .g{background:linear-gradient(135deg,#fff 0%,var(--p3) 55%,var(--p4) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-sub{font-size:.96rem;color:var(--muted);margin:14px 0 24px;line-height:1.65;}
+.hero-sub strong{color:var(--acc);font-weight:500;}
+.btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-p{padding:12px 28px;background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:.86rem;font-weight:500;text-decoration:none;cursor:pointer;transition:all .3s;box-shadow:0 0 26px rgba(124,58,237,.36);}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 0 44px rgba(124,58,237,.54);}
+.btn-o{padding:12px 28px;background:transparent;color:var(--p3);border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:.86rem;font-weight:500;text-decoration:none;cursor:pointer;transition:all .3s;}
+.btn-o:hover{background:rgba(124,58,237,.1);border-color:var(--p2);transform:translateY(-2px);}
+.stats{display:flex;gap:30px;margin-top:34px;flex-wrap:wrap;}
+.stat{border-left:2px solid var(--p1);padding-left:13px;}
+.stat-n{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,var(--p2),var(--p4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-l{font-size:.71rem;color:var(--muted);margin-top:2px;}
+
+.hero-vis{display:flex;justify-content:center;align-items:center;}
+.ring-wrap{position:relative;width:290px;height:290px;}
+.ring-outer{position:absolute;inset:0;border-radius:50%;padding:3px;background:conic-gradient(var(--p1),var(--p4),var(--cyan),var(--p1));animation:spin 8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring-inner{width:100%;height:100%;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:4.5rem;}
+.badges{position:absolute;inset:0;pointer-events:none;}
+.badge{position:absolute;background:rgba(14,9,32,.9);border:1px solid var(--border);border-radius:10px;padding:6px 12px;font-size:.7rem;font-weight:500;backdrop-filter:blur(8px);white-space:nowrap;}
+.badge:nth-child(1){top:4%;left:-18%;color:var(--acc);animation:bf2 3s ease-in-out infinite;}
+.badge:nth-child(2){top:44%;right:-24%;color:var(--cyan);animation:bf2 3s ease-in-out infinite 1s;}
+.badge:nth-child(3){bottom:8%;left:-12%;color:#ff6b00;animation:bf2 3s ease-in-out infinite 2s;}
+@keyframes bf2{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* ABOUT */
+#about{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:68px;align-items:start;}
+.about-p{color:var(--muted);line-height:1.8;font-size:.93rem;margin-bottom:16px;}
+.about-p strong{color:var(--acc);font-weight:500;}
+.hi-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px;}
+.hi{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:16px;transition:all .3s;}
+.hi:hover{background:rgba(124,58,237,.16);transform:translateY(-3px);}
+.hi-ico{font-size:1.3rem;margin-bottom:6px;}
+.hi-t{font-size:.8rem;font-weight:600;color:var(--text);margin-bottom:2px;}
+.hi-s{font-size:.72rem;color:var(--muted);}
+.info-cards{display:flex;flex-direction:column;gap:16px;}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:22px;transition:all .3s;}
+.info-card:hover{border-color:var(--p2);box-shadow:0 0 26px rgba(124,58,237,.13);}
+.info-card h3{font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--p3);margin-bottom:13px;}
+.ir{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(124,58,237,.1);font-size:.82rem;}
+.ir:last-child{border-bottom:none;}
+.ik{color:var(--muted);}
+.iv{color:var(--text);font-weight:500;font-size:.82rem;}
+
+/* SKILLS */
+#skills{background:var(--bg2);}
+.skill-cats{display:flex;flex-direction:column;gap:38px;}
+.scat-title{font-family:'Syne',sans-serif;font-size:.73rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p3);margin-bottom:13px;display:flex;align-items:center;gap:9px;}
+.scat-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.pills{display:flex;flex-wrap:wrap;gap:8px;}
+.pill{padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:500;border:1px solid;transition:all .25s;cursor:default;}
+.pill:hover{transform:translateY(-2px);}
+.pu{background:rgba(124,58,237,.1);border-color:rgba(124,58,237,.3);color:var(--p3);}
+.pc{background:rgba(34,211,238,.07);border-color:rgba(34,211,238,.25);color:var(--cyan);}
+.pg{background:rgba(52,211,153,.07);border-color:rgba(52,211,153,.25);color:var(--green);}
+.pp{background:rgba(244,114,182,.07);border-color:rgba(244,114,182,.25);color:var(--pink);}
+.po{background:rgba(251,146,60,.07);border-color:rgba(251,146,60,.25);color:var(--orange);}
+.pore{background:rgba(255,107,0,.1);border-color:rgba(255,107,0,.35);color:#ff6b00;}
+
+/* PROJECTS */
+#projects{background:linear-gradient(180deg,var(--bg2) 0%,var(--bg3) 100%);}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.proj-card{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:26px;transition:all .35s;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p1),var(--p4));transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.proj-card:hover{transform:translateY(-6px);border-color:var(--p2);box-shadow:0 16px 50px rgba(124,58,237,.2);}
+.proj-card:hover::before{transform:scaleX(1);}
+/* Hackathon card special */
+.proj-card.hack{border-color:rgba(52,211,153,.25);}
+.proj-card.hack::before{background:linear-gradient(90deg,#34d399,#22d3ee);}
+.proj-card.hack:hover{border-color:var(--green);}
+.pe{font-size:2rem;margin-bottom:14px;}
+.pt{font-family:'Syne',sans-serif;font-size:.92rem;font-weight:700;color:var(--text);margin-bottom:9px;}
+.pd{font-size:.8rem;color:var(--muted);line-height:1.7;flex:1;margin-bottom:14px;}
+.ptags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.ptag{font-size:.68rem;padding:3px 8px;background:rgba(124,58,237,.14);border:1px solid rgba(124,58,237,.2);border-radius:100px;color:var(--p3);}
+.ptag.green{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.25);color:var(--green);}
+.plink{display:inline-flex;align-items:center;gap:5px;font-size:.78rem;color:var(--p3);text-decoration:none;font-weight:500;transition:color .25s;margin-top:auto;}
+.plink:hover{color:var(--acc);}
+.plink::after{content:'→';transition:transform .25s;}
+.plink:hover::after{transform:translateX(4px);}
+.hack-badge{display:inline-block;background:linear-gradient(135deg,rgba(52,211,153,.15),rgba(34,211,238,.15));border:1px solid rgba(52,211,153,.3);color:var(--green);font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:6px;margin-bottom:10px;}
+
+/* EXPERIENCE */
+#experience{background:var(--bg3);}
+.exp-line{position:relative;padding-left:36px;}
+.exp-line::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--p1),var(--p4),transparent);}
+.exp-item{position:relative;margin-bottom:38px;background:var(--card);border:1px solid var(--border);border-radius:17px;padding:26px;transition:all .3s;}
+.exp-item::before{content:'';position:absolute;left:-41px;top:30px;width:10px;height:10px;background:linear-gradient(135deg,var(--p2),var(--p4));border-radius:50%;box-shadow:0 0 12px var(--p2);}
+.exp-item:hover{border-color:var(--p2);transform:translateX(5px);}
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px;}
+.exp-t{font-family:'Syne',sans-serif;font-size:.97rem;font-weight:700;color:var(--text);}
+.exp-co{font-size:.82rem;color:var(--p3);margin-top:3px;font-weight:500;}
+.exp-date{font-size:.72rem;color:var(--muted);background:rgba(124,58,237,.1);border:1px solid var(--border);padding:3px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0;margin-left:10px;}
+.exp-desc{font-size:.82rem;color:var(--muted);line-height:1.7;}
+.exp-hl{display:inline-block;margin-top:9px;background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(232,121,249,.18));border:1px solid rgba(124,58,237,.28);color:var(--acc);font-size:.73rem;font-weight:600;padding:3px 10px;border-radius:6px;}
+
+/* CERTIFICATIONS */
+#certifications{background:linear-gradient(180deg,var(--bg3) 0%,var(--bg) 100%);}
+.cert-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:26px;}
+.cstat{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px 18px;text-align:center;flex:1;min-width:95px;transition:all .3s;}
+.cstat:hover{border-color:var(--p2);transform:translateY(-2px);}
+.cstat-n{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,var(--p2),var(--p4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;}
+.cstat-l{font-size:.68rem;color:var(--muted);margin-top:2px;}
+
+/* Oracle featured cert */
+.oracle-cert-hero{
+  display:flex;align-items:center;gap:16px;
+  background:linear-gradient(135deg,rgba(255,107,0,.12),rgba(255,107,0,.05));
+  border:1px solid rgba(255,107,0,.4);
+  border-radius:14px;padding:20px 24px;margin-bottom:24px;
+  position:relative;overflow:hidden;
+}
+.oracle-cert-hero::before{content:'⭐ FEATURED';position:absolute;top:10px;right:14px;font-size:.62rem;font-weight:700;color:#ff6b00;letter-spacing:.1em;}
+.ora-cert-ico{font-size:2.2rem;flex-shrink:0;}
+.ora-cert-info h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+.ora-cert-info p{font-size:.8rem;color:var(--muted);}
+.ora-cert-info .ora-meta{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+.ora-meta-tag{font-size:.7rem;padding:2px 10px;border-radius:100px;background:rgba(255,107,0,.12);border:1px solid rgba(255,107,0,.3);color:#ff6b00;}
+
+.cert-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+.cf{padding:6px 15px;background:var(--card);border:1px solid var(--border);border-radius:100px;color:var(--muted);font-family:'Inter',sans-serif;font-size:.77rem;font-weight:500;cursor:pointer;transition:all .25s;}
+.cf:hover{border-color:var(--p2);color:var(--p3);}
+.cf.active{background:linear-gradient(135deg,var(--p1),var(--p2));border-color:transparent;color:#fff;box-shadow:0 0 16px rgba(124,58,237,.36);}
+
+.cert-year-group{margin-bottom:28px;}
+.cert-year-label{font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;padding-left:4px;}
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:17px;transition:all .3s;display:flex;align-items:flex-start;gap:12px;}
+.cc:hover{border-color:var(--p2);transform:translateY(-3px);box-shadow:0 7px 30px rgba(124,58,237,.17);}
+.cc.hide{display:none;}
+.cc-ico{width:38px;height:38px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.15rem;background:linear-gradient(135deg,rgba(124,58,237,.18),rgba(232,121,249,.18));}
+.cc-info h4{font-family:'Syne',sans-serif;font-size:.76rem;font-weight:700;color:var(--text);margin-bottom:3px;}
+.cc-info p{font-size:.7rem;color:var(--muted);}
+.cc-date{display:block;font-size:.66rem;color:var(--p3);margin-top:2px;}
+.cc-badge{display:inline-block;margin-top:5px;font-size:.62rem;padding:2px 7px;border-radius:100px;background:rgba(52,211,153,.09);border:1px solid rgba(52,211,153,.27);color:var(--green);}
+
+/* VOLUNTEERING */
+#volunteering{background:var(--bg2);}
+.vol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.vol-card{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:22px;transition:all .3s;}
+.vol-card:hover{border-color:var(--p2);transform:translateY(-4px);box-shadow:0 8px 32px rgba(124,58,237,.16);}
+.vol-ico{font-size:2rem;margin-bottom:12px;}
+.vol-t{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+.vol-org{font-size:.78rem;color:var(--p3);font-weight:500;margin-bottom:6px;}
+.vol-dur{font-size:.7rem;color:var(--muted);margin-bottom:8px;}
+.vol-desc{font-size:.76rem;color:var(--muted);line-height:1.6;}
+.vol-tag{display:inline-block;margin-top:10px;font-size:.66rem;padding:2px 8px;border-radius:100px;background:rgba(124,58,237,.1);border:1px solid var(--border);color:var(--p3);}
+
+/* ACHIEVEMENTS */
+#achievements{background:var(--bg);}
+.ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.ac{background:var(--card);border:1px solid var(--border);border-radius:17px;padding:28px 22px;text-align:center;transition:all .35s;position:relative;overflow:hidden;}
+.ac::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--p1),var(--p4));transform:scaleX(0);transition:transform .35s;}
+.ac:hover{transform:translateY(-6px);border-color:var(--p2);}
+.ac:hover::after{transform:scaleX(1);}
+.ac-ico{font-size:2.5rem;margin-bottom:12px;}
+.ac-t{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:7px;}
+.ac-d{font-size:.79rem;color:var(--muted);line-height:1.6;}
+.ac-yr{display:inline-block;margin-top:12px;font-size:.68rem;color:var(--p3);background:rgba(124,58,237,.1);border:1px solid var(--border);padding:2px 10px;border-radius:100px;}
+
+/* CONTACT */
+#contact{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);text-align:center;}
+.con-wrap{max-width:640px;margin:0 auto;}
+.con-sub{font-size:.96rem;color:var(--muted);line-height:1.7;margin-bottom:38px;}
+.con-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:44px;}
+.con-link{display:flex;align-items:center;gap:8px;padding:13px 22px;background:var(--card);border:1px solid var(--border);border-radius:11px;color:var(--text);text-decoration:none;font-size:.82rem;font-weight:500;transition:all .3s;}
+.con-link:hover{border-color:var(--p2);background:rgba(124,58,237,.13);transform:translateY(-3px);color:var(--acc);}
+.con-email{font-family:'Syne',sans-serif;font-size:clamp(1rem,2.5vw,1.7rem);font-weight:700;background:linear-gradient(135deg,var(--p2),var(--p4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+
+footer{padding:24px 52px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--bg2);position:relative;z-index:1;}
+.ft{font-size:.75rem;color:var(--muted);}
+.ft span{color:var(--p3);}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--p1);border-radius:2px;}
+
+@media(max-width:900px){
+  nav{padding:12px 16px;}
+  .nav-links{display:none;}
+  .wrap{padding:52px 16px;}
+  .hero-inner,.about-grid{grid-template-columns:1fr;}
+  .hero-vis{display:none;}
+  .proj-grid,.certs-grid,.ach-grid,.vol-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;gap:8px;text-align:center;}
+}
+
+/* PROJECT CATEGORY FILTER */
+.proj-cat-btn{padding:7px 18px;background:var(--card);border:1px solid var(--border);border-radius:100px;color:var(--muted);font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;cursor:pointer;transition:all .25s;}
+.proj-cat-btn:hover{border-color:var(--p2);color:var(--p3);}
+.proj-cat-btn.active{background:linear-gradient(135deg,var(--p1),var(--p2));border-color:transparent;color:#fff;box-shadow:0 0 16px rgba(124,58,237,.36);}
+.proj-cat-group{margin-bottom:44px;}
+.proj-cat-group.hidden{display:none;}
+.proj-group-label{font-family:'Syne',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p3);margin-bottom:16px;display:flex;align-items:center;gap:9px;}
+.proj-group-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.proj-meta-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:4px;}
+.proj-year-tag{font-size:.68rem;color:var(--p3);background:rgba(124,58,237,.1);border:1px solid var(--border);padding:2px 9px;border-radius:100px;}
+.proj-org-tag{font-size:.68rem;color:var(--muted);}
+.proj-team{font-size:.72rem;color:var(--muted);margin-bottom:10px;}
+.proj-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto;}
+.plink-demo{color:var(--cyan) !important;}
+.plink-demo:hover{color:#fff !important;}
+</style>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+<div class="blob b3"></div>
+
+<nav>
+  <div class="logo">PG.∂</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#volunteering">Volunteer</a></li>
+    <li><a href="#achievements">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:4px;">
+        <div class="tag"><span class="tag-dot"></span>Open to Opportunities 2026</div>
+        <div class="oracle-badge"><span class="ora-ico">☁️</span>Oracle Certified — OCI 2025</div>
+      </div>
+      <h1 class="hero-name"><span class="g">Priyanka</span><br>Gandhi A</h1>
+      <p class="hero-sub"><strong>Data Scientist & ECE Engineer</strong> — Building intelligent systems with AI/ML, NLP, Cloud &amp; Embedded Tech.</p>
+      <div class="btns">
+        <a href="#projects" class="btn-p">View Projects</a>
+        <a href="#contact" class="btn-o">Get In Touch</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat-n">2+</div><div class="stat-l">IBM Internships</div></div>
+        <div class="stat"><div class="stat-n">86%</div><div class="stat-l">ML Accuracy</div></div>
+        <div class="stat"><div class="stat-n">45+</div><div class="stat-l">Certificates</div></div>
+        <div class="stat"><div class="stat-n">1,230</div><div class="stat-l">LinkedIn Followers</div></div>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="ring-wrap">
+        <div class="ring-outer"><div class="ring-inner">🐉</div></div>
+        <div class="badges">
+          <div class="badge">🤖 IBM AI/ML</div>
+          <div class="badge">☁️ GCP Facilitator</div>
+          <div class="badge">☁️ Oracle OCI Certified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-label">Who I Am</div>
+    <h2 class="sec-title">About <span class="hl">Me</span></h2>
+    <div class="about-grid">
+      <div class="rev">
+        <p class="about-p">Hi! I'm <strong>Priyanka Gandhi A</strong>, a Final Year ECE student at <strong>Avinashilingam University, Coimbatore</strong> (2026), passionate about AI, Data Science, and Hardware systems.</p>
+        <p class="about-p">I've interned at <strong>IBM India twice</strong> — building sentiment classifiers with 86% accuracy and Random Forest models — and served as a <strong>Google Cloud Arcade Facilitator & Google Cloud Career Launchpad APAC</strong> member, mentoring peers in cloud computing.</p>
+        <p class="about-p">Recently earned the <strong>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</strong> certification. My ECE roots keep me grounded — I work with <strong>IoT, FPGA, VLSI, DSP, and Keysight ADS</strong>. Currently preparing for <strong>GATE ECE 2027</strong>.</p>
+        <div class="hi-grid">
+          <div class="hi"><div class="hi-ico">🎓</div><div class="hi-t">B.E. ECE</div><div class="hi-s">Avinashilingam Univ • 7.04</div></div>
+          <div class="hi"><div class="hi-ico">📍</div><div class="hi-t">Coimbatore</div><div class="hi-s">Tamil Nadu, India</div></div>
+          <div class="hi"><div class="hi-ico">🎯</div><div class="hi-t">GATE 2027</div><div class="hi-s">ECE Preparation</div></div>
+          <div class="hi"><div class="hi-ico">🌐</div><div class="hi-t">1,230</div><div class="hi-s">LinkedIn Followers</div></div>
+        </div>
+      </div>
+      <div class="info-cards rev">
+        <div class="info-card">
+          <h3>Quick Info</h3>
+          <div class="ir"><span class="ik">Email</span><span class="iv">2004apgandhi@gmail.com</span></div>
+          <div class="ir"><span class="ik">University</span><span class="iv">Avinashilingam Univ.</span></div>
+          <div class="ir"><span class="ik">Graduation</span><span class="iv">2026</span></div>
+          <div class="ir"><span class="ik">CGPA</span><span class="iv">7.04 (First Class)</span></div>
+          <div class="ir"><span class="ik">Focus</span><span class="iv">NLP + IoT + Cloud + Data + ECE</span></div>
+        </div>
+        <div class="info-card">
+          <h3>Communities</h3>
+          <div class="ir"><span class="ik">GDG Coimbatore</span><span class="iv">Member</span></div>
+          <div class="ir"><span class="ik">Google Cloud Career Launchpad APAC</span><span class="iv">Member</span></div>
+          <div class="ir"><span class="ik">IETE</span><span class="iv">Student Member</span></div>
+          <div class="ir"><span class="ik">Bureau of Indian Standards</span><span class="iv">Club Member</span></div>
+          <div class="ir"><span class="ik">NSS UPES</span><span class="iv">Student Volunteer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-label">What I Know</div>
+    <h2 class="sec-title">Technical <span class="hl">Skills</span></h2>
+    <div class="skill-cats">
+      <div class="rev">
+        <div class="scat-title">🤖 AI / ML & Data Science</div>
+        <div class="pills">
+          <span class="pill pu">Machine Learning</span><span class="pill pu">Deep Learning</span><span class="pill pu">NLP</span><span class="pill pu">BERT</span><span class="pill pu">TF-IDF</span><span class="pill pu">Scikit-learn</span><span class="pill pu">Sentiment Analysis</span><span class="pill pu">Neural Networks</span><span class="pill pu">Random Forest</span><span class="pill pu">Naive Bayes</span><span class="pill pu">Generative AI</span><span class="pill pu">IBM Watson</span><span class="pill pu">Kaggle</span><span class="pill pu">Anaconda</span><span class="pill pu">Databricks</span>
+        </div>
+      </div>
+      <div class="rev">
+        <div class="scat-title">☁️ Cloud & Platforms</div>
+        <div class="pills">
+          <span class="pill pc">Google Cloud Platform</span><span class="pill pc">AWS</span><span class="pill pc">Firebase</span><span class="pill pc">IBM Cloud</span><span class="pill pc">Amazon EC2</span><span class="pill pc">Amazon S3</span><span class="pill pc">BigQuery</span><span class="pill pc">Azure</span><span class="pill pore">Oracle Cloud (OCI)</span><span class="pill pore">OCI Security & IAM</span>
+        </div>
+      </div>
+      <div class="rev">
+        <div class="scat-title">💻 Programming Languages</div>
+        <div class="pills">
+          <span class="pill pg">Python</span><span class="pill pg">C</span><span class="pill pg">C++</span><span class="pill pg">C#</span><span class="pill pg">JavaScript</span><span class="pill pg">HTML</span><span class="pill pg">Verilog</span><span class="pill pg">MATLAB</span>
+        </div>
+      </div>
+      <div class="rev">
+        <div class="scat-title">🌐 Web & Data Tools</div>
+        <div class="pills">
+          <span class="pill pp">React.js</span><span class="pill pp">Node.js</span><span class="pill pp">REST APIs</span><span class="pill pp">Streamlit</span><span class="pill pp">Tailwind CSS</span><span class="pill pp">SQL</span><span class="pill pp">Tableau</span><span class="pill pp">Excel</span><span class="pill pp">Data Visualization</span><span class="pill pp">Git / GitHub</span>
+        </div>
+      </div>
+      <div class="rev">
+        <div class="scat-title">🔧 ECE & Embedded Systems</div>
+        <div class="pills">
+          <span class="pill po">IoT (ESP32 / Arduino)</span><span class="pill po">FPGA</span><span class="pill po">VLSI</span><span class="pill po">DSP</span><span class="pill po">Microcontrollers</span><span class="pill po">Keysight ADS</span><span class="pill po">Xilinx Vivado</span><span class="pill po">LTspice</span><span class="pill po">EasyEDA</span><span class="pill po">Scilab</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-label">What I've Built</div>
+    <h2 class="sec-title">Featured <span class="hl">Projects</span></h2>
+
+    <!-- Category Filter Tabs -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;">
+      <button class="proj-cat-btn active" onclick="filterProjects(this,'all')">All</button>
+      <button class="proj-cat-btn" onclick="filterProjects(this,'academics')">🎓 Academics</button>
+      <button class="proj-cat-btn" onclick="filterProjects(this,'internship')">💼 Internship</button>
+      <button class="proj-cat-btn" onclick="filterProjects(this,'independent')">🛠 Independent</button>
+      <button class="proj-cat-btn" onclick="filterProjects(this,'events')">🏆 Events</button>
+    </div>
+
+    <!-- ═══ ACADEMICS ═══ -->
+    <div class="proj-cat-group" data-group="academics">
+      <div class="proj-group-label">🎓 Academics</div>
+      <div class="proj-grid">
+        <div class="proj-card rev" data-cat="academics">
+          <div class="proj-meta-row"><span class="proj-year-tag">Jul 2025 – Present</span><span class="proj-org-tag">Avinashilingam University</span></div>
+          <div class="pe">🧠</div>
+          <div class="pt">Adaptive Systolic Architecture</div>
+          <div class="pd">FPGA-based energy-efficient ML accelerator using adaptive systolic arrays for edge AI computing.</div>
+          <div class="ptags"><span class="ptag">FPGA</span><span class="ptag">Verilog</span><span class="ptag">Xilinx Vivado</span><span class="ptag">Edge AI</span></div>
+          <div class="proj-team">👥 With Gopika PL, Supriya M, Shalini T</div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+        <div class="proj-card rev" data-cat="academics">
+          <div class="proj-meta-row"><span class="proj-year-tag">Dec 2024 – May 2025</span><span class="proj-org-tag">Avinashilingam University</span></div>
+          <div class="pe">📡</div>
+          <div class="pt">IoT Patient Monitoring System</div>
+          <div class="pd">Real-time healthcare parameter tracking with ESP32, monitoring vital signs with live data.</div>
+          <div class="ptags"><span class="ptag">ESP32</span><span class="ptag">IoT</span><span class="ptag">C++</span><span class="ptag">Healthcare</span></div>
+          <div class="proj-team">👥 With Puja S & Pavithra S</div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Patient-monitoring-system" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/Patient-monitoring-system" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ INTERNSHIP ═══ -->
+    <div class="proj-cat-group" data-group="internship">
+      <div class="proj-group-label">💼 Internship</div>
+      <div class="proj-grid">
+        <div class="proj-card rev" data-cat="internship">
+          <div class="proj-meta-row"><span class="proj-year-tag">May 2024 – Jun 2024</span><span class="proj-org-tag">IBM India</span></div>
+          <div class="pe">🎬</div>
+          <div class="pt">IMDb Sentiment & Emotion Analysis</div>
+          <div class="pd">NLP classifier using BERT and TF-IDF on IMDb reviews with Streamlit UI and REST API integration. Trained additionally using IBM Watson.</div>
+          <div class="ptags"><span class="ptag">BERT</span><span class="ptag">TF-IDF</span><span class="ptag">Streamlit</span><span class="ptag">Python</span></div>
+          <div class="proj-team">👥 With Reshma Sherin</div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/IMDB-data" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/IMDB-data" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+        <div class="proj-card rev" data-cat="internship">
+          <div class="proj-meta-row"><span class="proj-year-tag">Aug 2023 – Sep 2023</span><span class="proj-org-tag">IBM India</span></div>
+          <div class="pe">🍽️</div>
+          <div class="pt">Restaurant Review Sentiment Analysis</div>
+          <div class="pd">End-to-end NLP pipeline with feature engineering and multiple ML models for classification.</div>
+          <div class="ptags"><span class="ptag">NLP</span><span class="ptag">Scikit-learn</span><span class="ptag">Feature Eng.</span><span class="ptag">Python</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Sentimental-analysis-of-Restaurant-Management" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/Sentimental-analysis-of-Restaurant-Management" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ INDEPENDENT ═══ -->
+    <div class="proj-cat-group" data-group="independent">
+      <div class="proj-group-label">🛠 Independent</div>
+      <div class="proj-grid">
+        <div class="proj-card rev" data-cat="independent">
+          <div class="proj-meta-row"><span class="proj-year-tag">Mar – Apr 2025</span></div>
+          <div class="pe">🚦</div>
+          <div class="pt">Traffic Controller (Verilog)</div>
+          <div class="pd">Intelligent traffic control using Verilog HDL with finite state machine implementation.</div>
+          <div class="ptags"><span class="ptag">Verilog</span><span class="ptag">FSM</span><span class="ptag">Digital Design</span></div>
+          <div class="proj-team">👥 With Monica Gandhi A</div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Traffic-Controller" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/Traffic-Controller" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+        <div class="proj-card rev" data-cat="independent">
+          <div class="proj-meta-row"><span class="proj-year-tag">Apr 2025</span></div>
+          <div class="pe">⚡</div>
+          <div class="pt">Astable Multivibrator — EasyEDA PCB Design</div>
+          <div class="pd">Designed and simulated an Astable Multivibrator circuit in EasyEDA. 2-layer PCB layout with through-hole components, generates a continuous square wave for timer and oscillator applications.</div>
+          <div class="ptags"><span class="ptag">EasyEDA</span><span class="ptag">PCB Design</span><span class="ptag">Circuit Design</span><span class="ptag">JLCPCB</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Astable-Multivibrator" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/Astable-Multivibrator" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+        <div class="proj-card rev" data-cat="independent">
+          <div class="proj-meta-row"><span class="proj-year-tag">Sep 2024</span></div>
+          <div class="pe">📻</div>
+          <div class="pt">Create Your Own FM Radio Signal</div>
+          <div class="pd">Simulates an FM radio station by generating and modulating an FM signal using Scilab. Includes carrier wave modulation, audio resampling, FFT spectrum analysis, and playback validation.</div>
+          <div class="ptags"><span class="ptag">Scilab</span><span class="ptag">FM Modulation</span><span class="ptag">DSP</span><span class="ptag">FFT</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Create-the-own-radio-signal" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/Create-the-own-radio-signal" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+        <div class="proj-card rev" data-cat="independent">
+          <div class="proj-meta-row"><span class="proj-year-tag">Sep 2024</span></div>
+          <div class="pe">🎵</div>
+          <div class="pt">Audio Tone Generator</div>
+          <div class="pd">Sine wave synthesis in Scilab to generate audio tones for musical notes. Supports single notes, octave scaling, chord combinations, and melody sequencing.</div>
+          <div class="ptags"><span class="ptag">Scilab</span><span class="ptag">Signal Processing</span><span class="ptag">Audio Synthesis</span><span class="ptag">DSP</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Audio-Tone-generator" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/Audio-Tone-generator" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+        <div class="proj-card rev" data-cat="independent">
+          <div class="proj-meta-row"><span class="proj-year-tag">Nov 2023</span></div>
+          <div class="pe">🌡️</div>
+          <div class="pt">Temperature & Humidity Control</div>
+          <div class="pd">Real-time temperature and humidity monitoring using ESP32 Wi-Fi module and DHT11 sensor, integrated with Blynk IoT app for live dashboard readings.</div>
+          <div class="ptags"><span class="ptag">ESP32</span><span class="ptag">DHT11</span><span class="ptag">Arduino IDE</span><span class="ptag">Blynk IoT</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/temperature-and-humidity-control" target="_blank" class="plink">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ EVENTS ═══ -->
+    <div class="proj-cat-group" data-group="events">
+      <div class="proj-group-label">🏆 Events</div>
+      <div class="proj-grid">
+        <div class="proj-card hack rev" data-cat="events">
+          <span class="hack-badge">🏆 36-Hour National Hackathon — Feb 2026</span>
+          <div class="proj-org-tag" style="margin-bottom:8px;">New Prince Shri Bhavani College + IEEE + IETE</div>
+          <div class="pe">💊</div>
+          <div class="pt">MediGuard — IoT Smart Medicine Temp. Monitor</div>
+          <div class="pd">IoT-based smart system to monitor and maintain temperature-sensitive medicines (vaccines, insulin). Real-time DHT11/LM35 sensors, GSM alerts, buzzer + automated cooling via relay. Designed for rural healthcare.</div>
+          <div class="ptags">
+            <span class="ptag green">IoT</span><span class="ptag green">ESP32/Arduino</span><span class="ptag green">Embedded</span><span class="ptag green">GSM</span><span class="ptag green">Healthcare</span>
+          </div>
+          <div class="proj-team">👥 With Monica Gandhi A & Swathi Govindarajan</div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/MediGuard-IoT-Based-Smart-Medicine-Temperature-Protection-System" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://power-code129.github.io/MediGuard-IoT-Based-Smart-Medicine-Temperature-Protection-System" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+        <div class="proj-card hack rev" data-cat="events">
+          <span class="hack-badge">🗳️ Google Services Challenge — May 2026</span>
+          <div class="proj-org-tag" style="margin-bottom:8px;">Hack2skill + PromptWars + Google for Developers</div>
+          <div class="pe">🏛️</div>
+          <div class="pt">TN Election Guide — Tamil Nadu & Indian Election Education Platform</div>
+          <div class="pd"> AI-powered civic education platform that helps Tamil Nadu and Indian citizens understand the democratic election process — from voter registration and EVM/VVPAT usage to government formation. Features interactive election learning modules, AI chatbot assistance, EVM/VVPAT education, myth-busting FAQs, and smart offline fallback support for uninterrupted civic education access.</div>
+          <div class="ptags">
+            <span class="ptag green">IoT</span><span class="ptag green">React</span><span class="ptag green">FastAPI</span><span class="ptag green">Gemini API</span><span class="ptag green">Firebase</span><span class="ptag green">AI Chatbot</span>
+          </div>
+          <div class="proj-team">🏆 Hack2skill Score: <b>91.94%</b> &nbsp;|&nbsp; 📈 Rank: <b>610 / 22409</b></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/TN-Election-Guide" target="_blank" class="plink">View on GitHub</a>
+            <a href="https://election-guide-2026.web.app/" target="_blank" class="plink plink-demo">🌐 Demo / Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-label">Where I've Worked</div>
+    <h2 class="sec-title">Work <span class="hl">Experience</span></h2>
+    <div class="exp-line">
+      <div class="exp-item rev">
+        <div class="exp-head"><div><div class="exp-t">Forward Program Participant</div><div class="exp-co">📘 McKinsey.org</div></div><div class="exp-date">Apr 2026 – Present</div></div>
+        <div class="exp-desc">Selected for the McKinsey.org Forward Program, a global initiative by McKinsey & Company. Building structured problem-solving, analytical thinking, communication, and teamwork skills through real-world case-based learning activities and business-focused digital training.</div>
+        <span class="exp-hl">✓ Upskilled</span>
+      </div>
+      <div class="exp-item rev">
+        <div class="exp-head"><div><div class="exp-t">Google Cloud Arcade Facilitator</div><div class="exp-co">☁️ Google Cloud Facilitator Program</div></div><div class="exp-date">Aug 2025 – Feb 2026</div></div>
+        <div class="exp-desc">Mentored peers through GCP services and Qwiklabs labs. Guided students through cloud computing, AI/ML APIs, BigQuery, and Firebase as part of Google's official Arcade program.</div>
+        <span class="exp-hl">✓ Completed 10+ GCP Labs</span>
+      </div>
+      <div class="exp-item rev">
+        <div class="exp-head"><div><div class="exp-t">Data Science Intern</div><div class="exp-co">💼 IBM India Pvt. Ltd.</div></div><div class="exp-date">Jun 2024 – Jul 2024</div></div>
+        <div class="exp-desc">Built a Naive Bayes sentiment classifier achieving 86% accuracy. Performed NLP text preprocessing, TF-IDF feature extraction, and model evaluation using IBM Watson and Scikit-learn.</div>
+        <span class="exp-hl">✓ 86% Model Accuracy</span>
+      </div>
+      <div class="exp-item rev">
+        <div class="exp-head"><div><div class="exp-t">Graphic Design Intern</div><div class="exp-co">🎨 GAO Tek Inc.</div></div><div class="exp-date">Dec 2023 – Jul 2024</div></div>
+        <div class="exp-desc">Designed 50+ marketing creatives. Supported branding using Canva, Photoshop, and Figma.</div>
+        <span class="exp-hl">✓ 50+ Marketing Creatives</span>
+      </div>
+      <div class="exp-item rev">
+        <div class="exp-head"><div><div class="exp-t">Artificial Intelligence Intern</div><div class="exp-co">💼 IBM India Pvt. Ltd.</div></div><div class="exp-date">Aug 2023 – Oct 2023</div></div>
+        <div class="exp-desc">Developed a Random Forest model achieving 77% accuracy. Explored supervised learning, model tuning, and evaluation metrics using IBM AI tools and Python.</div>
+        <span class="exp-hl">✓ 77% Classification Accuracy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="wrap">
+    <div class="sec-label">What I've Earned</div>
+    <h2 class="sec-title">Certifi<span class="hl">cations</span></h2>
+
+    <!-- Oracle Featured -->
+    <div class="oracle-cert-hero rev">
+      <div class="ora-cert-ico">☁️</div>
+      <div class="ora-cert-info">
+        <h3>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</h3>
+        <p>Oracle  •  Issued Apr 2026  •  Expires Apr 2028</p>
+        <div class="ora-meta">
+          <span class="ora-meta-tag">✓ ID: 327217883OCI25FNDCFA</span>
+          <span class="ora-meta-tag">Cloud Computing</span>
+          <span class="ora-meta-tag">OCI</span>
+          <span class="ora-meta-tag">OCI Security & IAM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-stats rev">
+      <div class="cstat"><span class="cstat-n">45+</span><span class="cstat-l">Total Certs</span></div>
+      <div class="cstat"><span class="cstat-n">8</span><span class="cstat-l">IBM Badges</span></div>
+      <div class="cstat"><span class="cstat-n">3</span><span class="cstat-l">NPTEL</span></div>
+      <div class="cstat"><span class="cstat-n">4</span><span class="cstat-l">HackerRank</span></div>
+      <div class="cstat"><span class="cstat-n">1</span><span class="cstat-l">Oracle OCI</span></div>
+    </div>
+
+    <div class="cert-filters rev">
+      <button class="cf active" data-f="all">All</button>
+      <button class="cf" data-f="2026">📅 2026</button>
+      <button class="cf" data-f="2025">📅 2025</button>
+      <button class="cf" data-f="2024">📅 2024</button>
+      <button class="cf" data-f="2023">📅 2023</button>
+      <button class="cf" data-f="ai">🤖 AI/ML</button>
+      <button class="cf" data-f="cloud">☁️ Cloud</button>
+      <button class="cf" data-f="dev">💻 Dev</button>
+      <button class="cf" data-f="design">🎨 Design</button>
+    </div>
+
+    <!-- 2026 -->
+    <div class="cert-year-group">
+      <div class="cert-year-label">— 2026 —</div>
+      <div class="certs-grid">
+        <div class="cc" data-f="2026" data-cat="cloud"><div class="cc-ico">☁️</div><div class="cc-info"><h4>Oracle OCI Foundations Associate</h4><p>Oracle</p><span class="cc-date">Apr 2026 · Expires Apr 2028</span><span class="cc-badge">✓ 327217883OCI25FNDCFA</span></div></div>
+        <div class="cc" data-f="2026" data-cat="dev"><div class="cc-ico">🏆</div><div class="cc-info"><h4>36 Hours National Level Hackathon</h4><p>New Prince Shri Bhavani College + IEEE + IETE</p><span class="cc-date">Feb 2026</span><span class="cc-badge">✓ Participation Certificate</span></div></div>
+        <div class="cc" data-f="2026" data-cat="dev"><div class="cc-ico">🐍</div><div class="cc-info"><h4>Python Workshop — Zero to Pro</h4><p>Kumaraguru Yugam</p><span class="cc-date">Mar 2026</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2026" data-cat="ai"><div class="cc-ico">📊</div><div class="cc-info"><h4>Databricks — Raw Data to Real Impact</h4><p>Kumaraguru Yugam</p><span class="cc-date">Mar 2026</span><span class="cc-badge">✓ Verified</span></div></div>
+      </div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="cert-year-group">
+      <div class="cert-year-label">— 2025 —</div>
+      <div class="certs-grid">
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">🧩</div><div class="cc-info"><h4>Problem Solving (Basic)</h4><p>HackerRank</p><span class="cc-date">Oct 2025</span><span class="cc-badge">✓ 66CC58CBA884</span></div></div>
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">💼</div><div class="cc-info"><h4>Software Engineer Intern Certificate</h4><p>HackerRank</p><span class="cc-date">Oct 2025</span><span class="cc-badge">✓ B4437D31EAB4</span></div></div>
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">🏅</div><div class="cc-info"><h4>Certificate of Excellence — Daily Quiz</h4><p>Unstop</p><span class="cc-date">Sep 2025</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2025" data-cat="cloud"><div class="cc-ico">🟠</div><div class="cc-info"><h4>AWS Database Offerings</h4><p>Amazon Web Services</p><span class="cc-date">Jul 2025</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">🏭</div><div class="cc-info"><h4>Lean Manufacturing Practices Program</h4><p>Academic Network</p><span class="cc-date">Jul 2025</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">⚛️</div><div class="cc-info"><h4>Frontend Developer (React)</h4><p>HackerRank</p><span class="cc-date">Jun 2025</span><span class="cc-badge">✓ FBC99F520611</span></div></div>
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">💜</div><div class="cc-info"><h4>Foundational C# with Microsoft</h4><p>freeCodeCamp</p><span class="cc-date">Jun 2025</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">🏆</div><div class="cc-info"><h4>Codequezt #20 Coding Challenge</h4><p>Naukri Campus</p><span class="cc-date">Jun 2025</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2025" data-cat="design"><div class="cc-ico">🎨</div><div class="cc-info"><h4>Graphic Design Essentials</h4><p>Canva Graphic Design</p><span class="cc-date">Mar 2025</span><span class="cc-badge">✓ e6fb97</span></div></div>
+        <div class="cc" data-f="2025" data-cat="dev"><div class="cc-ico">💪</div><div class="cc-info"><h4>Employability Skill Training Program</h4><p>Mahindra Pride Classroom</p><span class="cc-date">Mar 2025</span><span class="cc-badge">✓ Verified</span></div></div>
+      </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="cert-year-group">
+      <div class="cert-year-label">— 2024 —</div>
+      <div class="certs-grid">
+        <div class="cc" data-f="2024" data-cat="cloud"><div class="cc-ico">☁️</div><div class="cc-info"><h4>Cloud Computing</h4><p>NPTEL</p><span class="cc-date">Nov 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="cloud"><div class="cc-ico">📡</div><div class="cc-info"><h4>Microwave Circuits Antenna Design (ADS)</h4><p>Avinashilingam Institute</p><span class="cc-date">Oct 2024</span><span class="cc-badge">✓ Keysight ADS + MATLAB</span></div></div>
+        <div class="cc" data-f="2024" data-cat="ai"><div class="cc-ico">🤖</div><div class="cc-info"><h4>Emerging Technologies (AI & Cloud)</h4><p>IBM</p><span class="cc-date">Jul 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="design"><div class="cc-ico">✏️</div><div class="cc-info"><h4>Graphic Design Internship</h4><p>GAOTek Inc.</p><span class="cc-date">Jul 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="design"><div class="cc-ico">📢</div><div class="cc-info"><h4>Digital Marketing</h4><p>GAOTek Inc.</p><span class="cc-date">Jul 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="design"><div class="cc-ico">🖼️</div><div class="cc-info"><h4>Graphic Designing</h4><p>GAOTek Inc.</p><span class="cc-date">Jul 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="ai"><div class="cc-ico">🧠</div><div class="cc-info"><h4>Machine Learning for Data Science</h4><p>IBM</p><span class="cc-date">Jun 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="ai"><div class="cc-ico">🏢</div><div class="cc-info"><h4>Getting Started with Enterprise AI</h4><p>IBM</p><span class="cc-date">Jun 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="cloud"><div class="cc-ico">🗄️</div><div class="cc-info"><h4>POSETTE: An Event for Postgres 2024</h4><p>Microsoft Reactor</p><span class="cc-date">Jun 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="cloud"><div class="cc-ico">📡</div><div class="cc-info"><h4>Introduction to Internet of Things</h4><p>NPTEL</p><span class="cc-date">Apr 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2024" data-cat="design"><div class="cc-ico">🖌️</div><div class="cc-info"><h4>Essential Photoshop — Beginner to Advanced</h4><p>Udemy</p><span class="cc-date">Mar 2024</span><span class="cc-badge">✓ Verified</span></div></div>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="cert-year-group">
+      <div class="cert-year-label">— 2023 —</div>
+      <div class="certs-grid">
+        <div class="cc" data-f="2023" data-cat="cloud"><div class="cc-ico">🔐</div><div class="cc-info"><h4>Cloud Security Engineer Journey</h4><p>Google Cloud Community India</p><span class="cc-date">Nov 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">💡</div><div class="cc-info"><h4>Artificial Intelligence — IBM</h4><p>IBM</p><span class="cc-date">Nov 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="dev"><div class="cc-ico">🔤</div><div class="cc-info"><h4>Technical English for Engineers</h4><p>NPTEL</p><span class="cc-date">Oct 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="cloud"><div class="cc-ico">🔵</div><div class="cc-info"><h4>Azure Data Fundamentals</h4><p>Microsoft</p><span class="cc-date">Oct 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="cloud"><div class="cc-ico">📂</div><div class="cc-info"><h4>Explore Data Roles and Services</h4><p>Microsoft</p><span class="cc-date">Oct 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">📊</div><div class="cc-info"><h4>Project Management Professional (PMP)</h4><p>IBM</p><span class="cc-date">Sep 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">✨</div><div class="cc-info"><h4>What Is Generative AI?</h4><p>LinkedIn</p><span class="cc-date">Aug 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">🔍</div><div class="cc-info"><h4>Generative AI: Evolution of Search</h4><p>LinkedIn</p><span class="cc-date">Aug 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">🇮🇳</div><div class="cc-info"><h4>AI For India 2.0</h4><p>HCL GUVI</p><span class="cc-date">Aug 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">👤</div><div class="cc-info"><h4>Face Recognition App using Python</h4><p>HCL GUVI</p><span class="cc-date">Aug 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="dev"><div class="cc-ico">⌨️</div><div class="cc-info"><h4>Developer & Technology Virtual Exp.</h4><p>Accenture UK & Ireland</p><span class="cc-date">Aug 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="dev"><div class="cc-ico">👩‍💼</div><div class="cc-info"><h4>Young Professional</h4><p>TCS iON</p><span class="cc-date">Aug 2023</span><span class="cc-badge">✓ 19854-24860545-1016</span></div></div>
+        <div class="cc" data-f="2023" data-cat="dev"><div class="cc-ico">🌿</div><div class="cc-info"><h4>ESG Virtual Experience Program</h4><p>Tata Consultancy Services</p><span class="cc-date">Aug 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="cloud"><div class="cc-ico">🏗️</div><div class="cc-info"><h4>Solution Architect Virtual Experience</h4><p>Amazon Web Services</p><span class="cc-date">Jul 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="dev"><div class="cc-ico">🖥️</div><div class="cc-info"><h4>Software Engineer Virtual Experience</h4><p>Hewlett Packard Enterprise</p><span class="cc-date">Jul 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">📈</div><div class="cc-info"><h4>Data Visualisation: Empowering Business</h4><p>Tata Group</p><span class="cc-date">Jul 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="ai"><div class="cc-ico">🐍</div><div class="cc-info"><h4>Python Projects for Beginners</h4><p>Great Learning</p><span class="cc-date">Jul 2023</span><span class="cc-badge">✓ Verified</span></div></div>
+        <div class="cc" data-f="2023" data-cat="dev"><div class="cc-ico">🔡</div><div class="cc-info"><h4>Certificate in C Programming</h4><p>Bharathidasan University</p><span class="cc-date">May 2018</span><span class="cc-badge">✓ 17CCP03355</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEERING -->
+<section id="volunteering">
+  <div class="wrap">
+    <div class="sec-label">Giving Back</div>
+    <h2 class="sec-title">Volunteer <span class="hl">Work</span></h2>
+    <div class="vol-grid">
+      <div class="vol-card rev">
+        <div class="vol-ico">☁️</div>
+        <div class="vol-t">Google Cloud Career Launchpad</div>
+        <div class="vol-org">Google Cloud Career Launchpad — APAC</div>
+        <div class="vol-dur">Jun 2025 – Present · 11 mos</div>
+        <div class="vol-desc">Member of Google's APAC career development program focused on cloud technology skills and career growth in Science & Technology.</div>
+        <span class="vol-tag">Science & Technology</span>
+      </div>
+      <div class="vol-card rev">
+        <div class="vol-ico">🌐</div>
+        <div class="vol-t">Member</div>
+        <div class="vol-org">GDG Coimbatore (Google Developer Groups)</div>
+        <div class="vol-dur">Jan 2025 – Present · 1 yr 4 mos</div>
+        <div class="vol-desc">Active member of the developer community — participating in tech talks, workshops, and Google technology events in Coimbatore.</div>
+        <span class="vol-tag">Science & Technology</span>
+      </div>
+      <div class="vol-card rev">
+        <div class="vol-ico">📐</div>
+        <div class="vol-t">Club Member</div>
+        <div class="vol-org">Bureau of Indian Standards</div>
+        <div class="vol-dur">Mar 2024 – Present · 2 yrs 2 mos</div>
+        <div class="vol-desc">Member of BIS student chapter promoting standards awareness and quality education within the institution.</div>
+        <span class="vol-tag">Education</span>
+      </div>
+      <div class="vol-card rev">
+        <div class="vol-ico">📡</div>
+        <div class="vol-t">Student Member</div>
+        <div class="vol-org">IETE (Institution of Electronics & Telecom Engineers)</div>
+        <div class="vol-dur">Sep 2023 – Present · 2 yrs 8 mos</div>
+        <div class="vol-desc">Active student member supporting technical events, seminars, and engineering community initiatives in electronics and telecommunications.</div>
+        <span class="vol-tag">Social Services</span>
+      </div>
+      <div class="vol-card rev">
+        <div class="vol-ico">🌱</div>
+        <div class="vol-t">Student Volunteer</div>
+        <div class="vol-org">NSS UPES (National Service Scheme)</div>
+        <div class="vol-dur">Sep 2022 – Present · 3 yrs 8 mos</div>
+        <div class="vol-desc">Volunteered in Swachh Bharat, social rallies, and various community awareness programs promoting social welfare and environmental cleanliness.</div>
+        <span class="vol-tag">Social Services</span>
+      </div>
+      <div class="vol-card rev">
+        <div class="vol-ico">🎖️</div>
+        <div class="vol-t">Cadet — NCC India</div>
+        <div class="vol-org">National Cadet Corps — India</div>
+        <div class="vol-dur">Jun 2017 – Apr 2019 · 1 yr 11 mos</div>
+        <div class="vol-desc">Trained in leadership, discipline, and national service as part of NCC. Participated in social activities, camps, and human rights awareness programs.</div>
+        <span class="vol-tag">Human Rights</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="wrap">
+    <div class="sec-label">Recognition</div>
+    <h2 class="sec-title">Achieve<span class="hl">ments</span></h2>
+    <div class="ach-grid">
+      <div class="ac rev">
+        <div class="ac-ico">☁️</div>
+        <div class="ac-t">Oracle OCI Certified</div>
+        <div class="ac-d">Oracle Cloud Infrastructure 2025 Certified Foundations Associate — valid until Apr 2028.</div>
+        <div class="ac-yr">Apr 2026</div>
+      </div>
+      <div class="ac rev">
+        <div class="ac-ico">🏆</div>
+        <div class="ac-t">36-Hour Hackathon Winner</div>
+        <div class="ac-d">Built MediGuard — IoT smart medicine monitor at national-level hackathon with IEEE & IETE collaboration.</div>
+        <div class="ac-yr">Feb 2026</div>
+      </div>
+      <div class="ac rev">
+        <div class="ac-ico">🥇</div>
+        <div class="ac-t">Ideathon Winner</div>
+        <div class="ac-d">First place at Advaida'24 Ideathon — innovative tech solution stood out among all competitors.</div>
+        <div class="ac-yr">Advaida '24</div>
+      </div>
+      <div class="ac rev">
+        <div class="ac-ico">🏅</div>
+        <div class="ac-t">National Science Day Quiz</div>
+        <div class="ac-d">Winner of National Science Day Quiz two consecutive years — demonstrating strong scientific knowledge.</div>
+        <div class="ac-yr">2024 & 2025</div>
+      </div>
+      <div class="ac rev">
+        <div class="ac-ico">☁️</div>
+        <div class="ac-t">10+ GCP Cloud Labs</div>
+        <div class="ac-d">Completed 10+ Google Cloud Platform labs covering AI/ML APIs, BigQuery, and Cloud Functions via Arcade.</div>
+        <div class="ac-yr">Google Cloud 2025–26</div>
+      </div>
+      <div class="ac rev">
+        <div class="ac-ico">🌐</div>
+        <div class="ac-t">1,200+ LinkedIn Followers</div>
+        <div class="ac-d">Built a professional network of 1,200+ connections on LinkedIn as a final year student — 6× the average.</div>
+        <div class="ac-yr">2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="con-wrap">
+      <div class="sec-label" style="justify-content:center">Let's Connect</div>
+      <h2 class="sec-title rev">Say <span class="hl">Hello!</span></h2>
+      <p class="con-sub rev">Open to Data Science, AI/ML, Cloud, and ECE hybrid roles. Always happy to connect with recruiters, collaborators, and fellow tech enthusiasts!</p>
+      <div class="con-links rev">
+        <a href="mailto:2004apgandhi@gmail.com" class="con-link">📧 Email Me</a>
+        <a href="https://linkedin.com/in/a-priyanka-gandhi-ece" target="_blank" class="con-link">💼 LinkedIn</a>
+        <a href="https://github.com/power-code129" target="_blank" class="con-link">🐙 GitHub</a>
+        <a href="https://www.credly.com/users/priyanka-gandhi-a.ece" target="_blank" class="con-link">🥇 Credly</a>
+      </div>
+      <a href="mailto:2004apgandhi@gmail.com" class="con-email rev">2004apgandhi@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">Built with 💜 by <span>Priyanka Gandhi A</span> — ECE Final Year '26</div>
+  <div class="ft">Even dragons debug 🐉</div>
+</footer>
+
+<script>
+
+// PROJECT CATEGORY FILTER
+function filterProjects(btn, cat) {
+  document.querySelectorAll('.proj-cat-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  var groups = document.querySelectorAll('.proj-cat-group');
+  if (cat === 'all') {
+    groups.forEach(function(g){g.classList.remove('hidden');});
+  } else {
+    groups.forEach(function(g){
+      g.classList.toggle('hidden', g.getAttribute('data-group') !== cat);
+    });
+  }
+}
+
+// CURSOR
+var cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+var mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',function(e){
+  mx=e.clientX;my=e.clientY;
+  cur.style.transform='translate('+(mx-5)+'px,'+(my-5)+'px)';
+});
+function animRing(){
+  rx+=(mx-rx)*.13;ry+=(my-ry)*.13;
+  ring.style.transform='translate('+(rx-16)+'px,'+(ry-16)+'px)';
+  requestAnimationFrame(animRing);
+}
+animRing();
+document.querySelectorAll('a,button,.proj-card,.cc,.pill,.vol-card,.ac,.hi,.cstat').forEach(function(el){
+  el.addEventListener('mouseenter',function(){
+    cur.style.width='20px';cur.style.height='20px';
+    cur.style.transform='translate('+(mx-10)+'px,'+(my-10)+'px)';
+    cur.style.background='var(--p4)';ring.style.borderColor='var(--p4)';
+  });
+  el.addEventListener('mouseleave',function(){
+    cur.style.width='10px';cur.style.height='10px';
+    cur.style.transform='translate('+(mx-5)+'px,'+(my-5)+'px)';
+    cur.style.background='var(--p2)';ring.style.borderColor='var(--p3)';
+  });
+});
+
+// SCROLL REVEAL
+var revs=document.querySelectorAll('.rev');
+var ro=new IntersectionObserver(function(entries){
+  entries.forEach(function(e,i){
+    if(e.isIntersecting){setTimeout(function(){e.target.classList.add('on');},i*60);ro.unobserve(e.target);}
+  });
+},{threshold:.07});
+revs.forEach(function(el){ro.observe(el);});
+
+// CERT FILTER
+var cfs=document.querySelectorAll('.cf');
+var ccs=document.querySelectorAll('.cc');
+var yearGroups=document.querySelectorAll('.cert-year-group');
+cfs.forEach(function(btn){
+  btn.addEventListener('click',function(){
+    cfs.forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    var f=btn.getAttribute('data-f');
+    if(f==='all'){
+      yearGroups.forEach(function(g){g.style.display='';});
+      ccs.forEach(function(c){c.classList.remove('hide');});
+    } else if(['2026','2025','2024','2023'].indexOf(f)>-1){
+      yearGroups.forEach(function(g){g.style.display='none';});
+      ccs.forEach(function(c){c.classList.add('hide');});
+      document.querySelectorAll('.cc[data-f="'+f+'"]').forEach(function(c){
+        c.classList.remove('hide');
+        c.closest('.cert-year-group').style.display='';
+      });
+    } else {
+      yearGroups.forEach(function(g){g.style.display='';});
+      ccs.forEach(function(c){
+        c.classList.toggle('hide',c.getAttribute('data-cat')!==f);
+      });
+      yearGroups.forEach(function(g){
+        var visible=g.querySelectorAll('.cc:not(.hide)');
+        g.style.display=visible.length===0?'none':'';
+      });
+    }
+  });
+});
+
+</script>
+</body>
+</html>
