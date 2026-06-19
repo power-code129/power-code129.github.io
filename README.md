@@ -1,149 +1,120 @@
 <h1 align="center">Hi 👋, I'm Priyanka Gandhi A</h1>
 
 <h3 align="center">
-ECE Graduate • AI/ML • Cloud • IoT • Full Stack Learner
+Electronics & Communication Engineer | AI/ML | Cloud Computing | IoT
 </h3>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&size=24&duration=2500&pause=800&center=true&vCenter=true&width=800&lines=ECE+Graduate;Cloud+Computing+Learner;AI+%26+Machine+Learning+Enthusiast;React+Developer;Always+Learning+New+Technologies" />
+</p>
 
 ---
 
 ## 👩‍💻 About Me
 
-I'm an Electronics and Communication Engineering graduate passionate about building intelligent systems using Artificial Intelligence, Machine Learning, Cloud Computing, IoT and Embedded Systems.
-
-I enjoy solving real-world engineering problems through software and hardware integration while continuously learning modern cloud technologies.
-
----
-
-## 🚀 Areas of Interest
-
-- 🤖 Artificial Intelligence & Machine Learning
-- 📊 Data Science & NLP
-- ☁️ Cloud Computing (AWS, GCP & OCI)
-- 🌐 Full Stack Development
-- 📡 IoT & Embedded Systems
-- ⚡ FPGA, DSP & Digital Design
+- 🎓 B.E. Electronics and Communication Engineering
+- ☁️ Learning **AWS, GCP & Oracle Cloud Infrastructure**
+- 🤖 Interested in **AI, Machine Learning & NLP**
+- 🌐 Building projects with **React & Cloud**
+- 📚 Always exploring new technologies
+- 🎯 Looking for opportunities as a **Cloud / Software Engineer**
 
 ---
 
-## 🛠 Technical Skills
+## 🚀 Tech Stack
 
-### Languages
+### Programming Languages
 
-Python • Java • C • C++ • JavaScript • HTML • MATLAB • Verilog
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### Web
+### Web Development
 
-React.js • Node.js • REST API • SQL
-
-### AI / ML
-
-Machine Learning
-
-Deep Learning
-
-NLP
-
-BERT
-
-Scikit-Learn
-
-IBM Watson
-
-Random Forest
-
-Naive Bayes
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 ### Cloud
 
-AWS
-
-Google Cloud Platform
-
-Oracle Cloud Infrastructure
-
-Amazon EC2
-
-Amazon S3
-
-Firebase
-
-BigQuery
-
-IBM Cloud
-
-### Tools
-
-Git
-
-GitHub
-
-VS Code
-
-Tableau
-
-Excel
-
-Streamlit
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![Oracle Cloud](https://img.shields.io/badge/Oracle_Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 
 ---
 
-# 🚀 Featured Projects
+## 📂 Featured Projects
 
-- ☁️ AWS S3 Portfolio Deployment
-- 🤖 IMDb Sentiment Analysis using BERT
-- 🍽 Restaurant Review Sentiment Analysis
-- 📡 IoT Patient Monitoring System
-- 🚦 Traffic Controller using Verilog
-- 💊 MediGuard – Smart Medicine Monitoring
-- 🗳 TN Election Guide (Google Hackathon)
-
-👉 More projects are available in my repositories.
-
----
-
-# 📜 Certifications
-
-- Oracle Cloud Infrastructure Foundations Associate
-- NPTEL Cloud Computing
-- IBM AI & Machine Learning
-- AWS Database Offerings
-- HackerRank Frontend (React)
-- Problem Solving (Basic)
+| Project | Description |
+|---------|-------------|
+| ☁️ AWS Portfolio | React portfolio deployed using Amazon S3 Static Website Hosting |
+| 🤖 IMDb Sentiment Analysis | Sentiment prediction using BERT |
+| 🍽 Restaurant Review Analysis | NLP-based sentiment analysis |
+| 📡 IoT Patient Monitoring | IoT healthcare monitoring system |
+| 🚦 Traffic Controller | Verilog FPGA project |
+| 💊 MediGuard | Smart medicine monitoring system |
 
 ---
 
-# 🌐 Portfolio
+## 📜 Certifications
 
-**Website**
+- ✅ Oracle Cloud Infrastructure Foundations Associate
+- ✅ NPTEL Cloud Computing
+- ✅ IBM AI & Machine Learning
+- ✅ AWS Database Offerings
+- ✅ HackerRank Frontend (React)
+
+---
+
+## 📊 GitHub Analytics
+
+<p align="center">
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=power-code129&show_icons=true&theme=tokyonight"/>
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=power-code129&theme=tokyonight"/>
+</p>
+
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=power-code129&layout=compact&theme=tokyonight"/>
+</p>
+
+---
+
+## 🌐 Portfolio
+
+🔗 **GitHub Pages**
 
 https://power-code129.github.io/
 
----
+☁️ **AWS S3 Deployment**
 
-# ☁️ AWS Hands-on
-
-Successfully deployed my React portfolio using:
-
-- Amazon S3 Static Website Hosting
-- Bucket Policies
-- AWS Billing Budget
+Amazon S3 Static Website Hosting Project
 
 ---
 
-# 📫 Connect with Me
+## 📫 Connect With Me
 
-📧 Email
+<p align="center">
 
-2004apgandhi@gmail.com
+<a href="https://github.com/power-code129">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
+</a>
 
-💼 LinkedIn
+<a href="www.linkedin.com/in/a-priyanka-gandhi-ece">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin"/>
+</a>
 
-www.linkedin.com/in/a-priyanka-gandhi-ece
+<a href="mailto:2004apgandhi@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
 
-🐙 GitHub
-
-https://github.com/power-code129
+</p>
 
 ---
 
-⭐ Thanks for visiting my profile!
+<p align="center">
+<img src="https://komarev.com/ghpvc/?username=power-code129&label=Profile+Views&color=blue&style=for-the-badge"/>
+</p>
+
+<h3 align="center">⭐ Thanks for visiting my profile! ⭐</h3>
