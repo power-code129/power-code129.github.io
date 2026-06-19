@@ -1,120 +1,263 @@
 <h1 align="center">Hi 👋, I'm Priyanka Gandhi A</h1>
 
 <h3 align="center">
-Electronics & Communication Engineer | AI/ML | Cloud Computing | IoT
+Electronics & Communication Engineer | Cloud Computing | AI/ML | Full Stack Development
 </h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&size=24&duration=2500&pause=800&center=true&vCenter=true&width=800&lines=ECE+Graduate;Cloud+Computing+Learner;AI+%26+Machine+Learning+Enthusiast;React+Developer;Always+Learning+New+Technologies" />
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=24&duration=2500&pause=1000&color=2E9AFE&center=true&vCenter=true&width=900&lines=ECE+Graduate;Cloud+Computing+Learner;AI+%26+Machine+Learning+Enthusiast;React+Developer;Always+Learning+New+Technologies" alt="Typing SVG"/>
 </p>
-
----
-
-## 👩‍💻 About Me
-
-- 🎓 B.E. Electronics and Communication Engineering
-- ☁️ Learning **AWS, GCP & Oracle Cloud Infrastructure**
-- 🤖 Interested in **AI, Machine Learning & NLP**
-- 🌐 Building projects with **React & Cloud**
-- 📚 Always exploring new technologies
-- 🎯 Looking for opportunities as a **Cloud / Software Engineer**
-
----
-
-## 🚀 Tech Stack
-
-### Programming Languages
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-### Web Development
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![HTML5](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-### Cloud
-
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Oracle Cloud](https://img.shields.io/badge/Oracle_Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-
----
-
-## 📂 Featured Projects
-
-| Project | Description |
-|---------|-------------|
-| ☁️ AWS Portfolio | React portfolio deployed using Amazon S3 Static Website Hosting |
-| 🤖 IMDb Sentiment Analysis | Sentiment prediction using BERT |
-| 🍽 Restaurant Review Analysis | NLP-based sentiment analysis |
-| 📡 IoT Patient Monitoring | IoT healthcare monitoring system |
-| 🚦 Traffic Controller | Verilog FPGA project |
-| 💊 MediGuard | Smart medicine monitoring system |
-
----
-
-## 📜 Certifications
-
-- ✅ Oracle Cloud Infrastructure Foundations Associate
-- ✅ NPTEL Cloud Computing
-- ✅ IBM AI & Machine Learning
-- ✅ AWS Database Offerings
-- ✅ HackerRank Frontend (React)
-
----
-
-## 📊 GitHub Analytics
-
-<p align="center">
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=power-code129&show_icons=true&theme=tokyonight"/>
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=power-code129&theme=tokyonight"/>
-</p>
-
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=power-code129&layout=compact&theme=tokyonight"/>
-</p>
-
----
-
-## 🌐 Portfolio
-
-🔗 **GitHub Pages**
-
-https://power-code129.github.io/
-
-☁️ **AWS S3 Deployment**
-
-Amazon S3 Static Website Hosting Project
-
----
-
-## 📫 Connect With Me
 
 <p align="center">
 
 <a href="https://github.com/power-code129">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
-<a href="www.linkedin.com/in/a-priyanka-gandhi-ece">
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin"/>
+<a href="YOUR_LINKEDIN_URL">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
 <a href="mailto:2004apgandhi@gmail.com">
 <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 
+<a href="https://power-code129.github.io/">
+<img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+</a>
+
+</p>
+
+---
+
+# 👩‍💻 About Me
+
+🎓 B.E. Electronics and Communication Engineering Graduate
+
+💡 Passionate about solving real-world problems using **Cloud Computing, Artificial Intelligence, Machine Learning, IoT, and Full Stack Development**.
+
+☁️ Currently expanding my cloud knowledge through hands-on projects using **AWS, Google Cloud Platform, and Oracle Cloud Infrastructure**.
+
+🚀 I enjoy learning new technologies, building practical applications, and continuously improving my technical skills.
+
+---
+
+# 🚀 Areas of Interest
+
+- ☁️ Cloud Computing
+- 🤖 Artificial Intelligence
+- 🧠 Machine Learning
+- 📊 Data Science & NLP
+- 🌐 Full Stack Development
+- 📡 IoT & Embedded Systems
+- ⚡ FPGA, DSP & Digital Design
+
+---
+
+# 🛠 Tech Stack
+
+### 💻 Programming Languages
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=python,java,c,cpp,javascript,html,css"/>
+
+</p>
+
+---
+
+### 🌐 Web Development
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=react,nodejs"/>
+
+</p>
+
+REST APIs • SQL
+
+---
+
+### ☁️ Cloud Platforms
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=aws,gcp,firebase"/>
+
+</p>
+
+- Oracle Cloud Infrastructure (OCI)
+- Amazon EC2
+- Amazon S3
+- Google BigQuery
+- IBM Cloud
+
+---
+
+### 🤖 AI / ML
+
+- Machine Learning
+- Deep Learning
+- Natural Language Processing (NLP)
+- BERT
+- Scikit-Learn
+- IBM Watson
+- Random Forest
+- Naive Bayes
+
+---
+
+### 🛠 Tools
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=git,github,vscode"/>
+
+</p>
+
+Tableau • Excel • Streamlit • MATLAB • Verilog
+
+---
+
+# ☁️ Cloud Journey
+
+✅ Oracle Cloud Infrastructure Foundations Associate
+
+✅ Built and deployed my React portfolio using **Amazon S3 Static Website Hosting**
+
+✅ Configured:
+
+- Amazon S3 Bucket
+- Static Website Hosting
+- Bucket Policies
+- AWS Billing Budget
+
+🌱 Currently learning:
+
+- AWS Core Services
+- Google Cloud Platform
+- Cloud Deployment Best Practices
+
+---
+
+# 🚀 Featured Projects
+
+| Project | Description |
+|----------|-------------|
+| ☁️ AWS Portfolio Deployment | React portfolio deployed using Amazon S3 Static Website Hosting |
+| 🤖 IMDb Sentiment Analysis | Sentiment Analysis using BERT |
+| 🍽 Restaurant Review Sentiment Analysis | NLP-based sentiment prediction |
+| 📡 IoT Patient Monitoring | Smart healthcare monitoring system |
+| 🚦 Traffic Controller | FPGA project using Verilog |
+| 💊 MediGuard | Smart medicine monitoring system |
+| 🗳 TN Election Guide | Google Hackathon project |
+
+👉 Explore more in my repositories.
+
+---
+
+# 📜 Certifications
+
+- 🏅 Oracle Cloud Infrastructure Foundations Associate
+- 🏅 NPTEL Cloud Computing
+- 🏅 IBM Artificial Intelligence & Machine Learning
+- 🏅 AWS Database Offerings
+- 🏅 HackerRank Frontend (React)
+- 🏅 HackerRank Problem Solving (Basic)
+
+---
+
+# 🌐 Portfolio
+
+### Live Website
+
+🔗 **GitHub Pages**
+
+https://power-code129.github.io/
+
+---
+
+### AWS Deployment
+
+Successfully hosted my portfolio using **Amazon S3 Static Website Hosting** as a hands-on cloud project.
+http://priyanka-gandhi-cloud-portfolio-798350130221-ap-south-1-an.s3-website.ap-south-1.amazonaws.com/
+
+---
+
+# 📈 GitHub Statistics
+
+<p align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=power-code129&show_icons=true&theme=tokyonight"/>
+
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=power-code129&theme=tokyonight"/>
+
+</p>
+
+---
+
+# 💻 Most Used Languages
+
+<p align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=power-code129&layout=compact&theme=tokyonight"/>
+
+</p>
+
+---
+
+# 🏆 GitHub Trophies
+
+<p align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=power-code129&theme=algolia&margin-w=15&margin-h=15"/>
+
+</p>
+
+---
+
+# 📊 Contribution Graph
+
+<p align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=power-code129&theme=tokyo-night"/>
+
+</p>
+
+---
+
+# 📫 Connect With Me
+
+<p align="center">
+
+<a href="https://github.com/power-code129">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="www.linkedin.com/in/a-priyanka-gandhi-ece">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="mailto:2004apgandhi@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<a href="https://power-code129.github.io/">
+<img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+</a>
+
 </p>
 
 ---
 
 <p align="center">
-<img src="https://komarev.com/ghpvc/?username=power-code129&label=Profile+Views&color=blue&style=for-the-badge"/>
+
+<img src="https://komarev.com/ghpvc/?username=power-code129&label=Profile+Views&color=0e75b6&style=for-the-badge"/>
+
 </p>
 
-<h3 align="center">⭐ Thanks for visiting my profile! ⭐</h3>
+---
+
+<h3 align="center">
+⭐ Thanks for visiting my profile! ⭐
+</h3>
