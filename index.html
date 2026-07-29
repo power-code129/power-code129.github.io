@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyanka Gandhi A — Aspiring Technical Project Manager</title>
+<meta name="description" content="Priyanka Gandhi A — ECE graduate building across Hardware, Embedded Systems, Software, Cloud, AI/ML and Technical Project Management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%230a0a0a%27/%3E%3Ctext x=%2750%27 y=%2766%27 font-family=%27Arial,Helvetica,sans-serif%27 font-size=%2748%27 font-weight=%27700%27 fill=%27%234285F4%27 text-anchor=%27middle%27%3EPG%3C/text%3E%3C/svg%3E">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<style>
+  :root{
+    --blue:#4285F4;
+    --red:#EA4335;
+    --yellow:#FBBC05;
+    --green:#34A853;
+    --deep:#174EA6;
+    --white:#ffffff;
+    --black:#0a0a0a;
+    --line-on-white:#e4e4e4;
+    --line-on-black:#2a2a2a;
+    --muted-on-white:#5b5b5b;
+    --muted-on-black:#a8a8a8;
+    --radius:10px;
+    --maxw:1160px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+  body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--white);
+    color:var(--black);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    line-height:1.15;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;}
+  button{font-family:inherit;}
+
+  .skip-link{
+    position:absolute;left:-999px;top:0;background:var(--black);color:var(--white);
+    padding:10px 16px;z-index:1000;border-radius:0 0 8px 0;font-size:.85rem;
+  }
+  .skip-link:focus{left:0;}
+
+  :focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  section{padding:96px 0;}
+  .on-white{background:var(--white);color:var(--black);}
+  .on-black{background:var(--black);color:var(--white);}
+
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .eyebrow .dash{width:26px;height:2px;background:var(--blue);display:inline-block;}
+  .on-black .eyebrow .dash{background:var(--yellow);}
+  .on-white .eyebrow{color:var(--muted-on-white);}
+  .on-black .eyebrow{color:var(--muted-on-black);}
+
+  .sec-title{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:44px;max-width:720px;}
+
+  /* NAV */
+  header.nav{
+    position:sticky;top:0;z-index:500;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line-on-white);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:0 28px;
+    display:flex;align-items:center;justify-content:space-between;height:64px;
+  }
+  .brand{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;
+    display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--black);
+  }
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--blue);display:inline-block;}
+  .nav-links{
+    list-style:none;display:flex;gap:2px;align-items:center;
+  }
+  .nav-links a{
+    text-decoration:none;color:#444;font-size:.85rem;font-weight:500;
+    padding:9px 12px;border-radius:8px;transition:background .15s,color .15s;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{background:#f2f2f2;color:var(--black);}
+  .nav-links a.active{color:var(--blue);}
+  .nav-toggle{
+    display:none;background:none;border:1px solid var(--line-on-white);border-radius:8px;
+    width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer;
+  }
+  @media(max-width:1080px){
+    .nav-links{display:none;}
+    .nav-toggle{display:flex;}
+    .nav-links.mobile-open{
+      display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;
+      background:var(--white);border-bottom:1px solid var(--line-on-white);padding:8px;gap:0;
+    }
+    .nav-links.mobile-open a{padding:12px 14px;width:100%;}
+  }
+
+  /* HERO */
+  #home{padding-top:64px;padding-bottom:80px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+    padding-top:64px;
+  }
+  .pill-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--line-on-white);border-radius:100px;padding:6px 14px;
+    font-size:.78rem;font-weight:600;color:#333;margin-bottom:22px;
+  }
+  .pill-tag .dotgreen{width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .hero-headline{font-size:clamp(2rem,4.4vw,3.4rem);}
+  .hero-accentline{
+    margin-top:16px;font-size:.95rem;font-weight:600;letter-spacing:.02em;color:var(--deep);
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  }
+  .hero-accentline .sep{color:#bbb;font-weight:400;}
+  .hero-tagline{margin-top:22px;font-size:1.05rem;color:var(--muted-on-white);max-width:540px;line-height:1.7;}
+  .hero-name{margin-top:8px;font-size:1rem;color:#777;font-weight:500;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:8px;font-size:.88rem;font-weight:600;
+    text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s,background .15s,border-color .15s;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-solid{background:var(--black);color:var(--white);}
+  .btn-solid:hover{background:#222;}
+  .btn-outline{background:transparent;border-color:var(--line-on-white);color:var(--black);}
+  .btn-outline:hover{border-color:var(--black);}
+  .on-black .btn-outline{border-color:var(--line-on-black);color:var(--white);}
+  .on-black .btn-outline:hover{border-color:var(--white);}
+
+  .hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap;}
+  .hstat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;}
+  .hstat span{font-size:.72rem;color:var(--muted-on-white);text-transform:uppercase;letter-spacing:.06em;}
+
+  /* Journey diagram (hero) */
+  .journey-diagram{
+    border:1px solid var(--line-on-white);border-radius:16px;padding:26px 22px;background:#fafafa;
+  }
+  .jd-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-on-white);font-weight:700;margin-bottom:18px;}
+  .jd-step{display:flex;align-items:center;gap:14px;position:relative;padding:10px 0;}
+  .jd-step .jd-dot{
+    width:34px;height:34px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;color:#fff;
+  }
+  .jd-step .jd-dot i{width:16px;height:16px;}
+  .jd-step .jd-label{font-weight:600;font-size:.92rem;}
+  .jd-line{
+    position:absolute;left:17px;top:44px;bottom:-10px;width:2px;background:var(--line-on-white);
+  }
+  .jd-step:last-child .jd-line{display:none;}
+
+  /* HIGHLIGHTS */
+  .hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .hl-card{
+    border:1px solid var(--line-on-black);border-radius:14px;padding:26px;
+    background:#111;transition:transform .2s,border-color .2s;
+  }
+  .hl-card:hover{transform:translateY(-4px);border-color:#444;}
+  .hl-ico{
+    width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+  }
+  .hl-ico i{width:20px;height:20px;color:#fff;}
+  .hl-card h3{font-size:1.02rem;margin-bottom:8px;}
+  .hl-card p{font-size:.85rem;color:var(--muted-on-black);line-height:1.6;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:56px;align-items:start;}
+  .about-copy p{font-size:1rem;color:#333;line-height:1.85;margin-bottom:14px;}
+  .about-copy strong{color:var(--black);font-weight:700;}
+  .quickcard{border:1px solid var(--line-on-white);border-radius:14px;padding:22px;margin-bottom:16px;}
+  .quickcard h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-on-white);margin-bottom:14px;}
+  .qrow{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line-on-white);font-size:.86rem;}
+  .qrow:last-child{border-bottom:none;}
+  .qrow .k{color:var(--muted-on-white);}
+  .qrow .v{font-weight:600;text-align:right;}
+
+  /* JOURNEY TIMELINE */
+  .timeline{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line-on-black);margin-left:6px;}
+  .tl-year{position:relative;padding:0 0 44px 34px;}
+  .tl-year:last-child{padding-bottom:0;}
+  .tl-dot{
+    position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;
+  }
+  .tl-year-label{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:14px;}
+  .tl-items{display:flex;flex-direction:column;gap:10px;}
+  .tl-item{font-size:.9rem;color:var(--muted-on-black);line-height:1.6;padding-left:2px;}
+  .tl-item b{color:#fff;font-weight:600;}
+
+  /* SKILLS */
+  .skill-cat{margin-bottom:38px;}
+  .skill-cat:last-child{margin-bottom:0;}
+  .skill-cat-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .skill-cat-head i{width:18px;height:18px;}
+  .skill-cat-head h3{font-size:1rem;}
+  .skill-chips{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{
+    border:1px solid var(--line-on-white);border-radius:10px;padding:10px 14px;
+    min-width:150px;transition:border-color .15s,transform .15s;
+  }
+  .chip:hover{border-color:#bbb;transform:translateY(-2px);}
+  .chip .cname{font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:7px;}
+  .chip .cname .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+  .chip .cevidence{font-size:.72rem;color:var(--muted-on-white);margin-top:4px;}
+
+  /* EXPERIENCE */
+  .exp-list{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line-on-black);margin-left:6px;}
+  .exp-item{position:relative;padding:0 0 34px 34px;}
+  .exp-item:last-child{padding-bottom:0;}
+  .exp-dot{position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;}
+  .exp-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;margin-bottom:6px;}
+  .exp-role{font-size:1.02rem;font-weight:700;}
+  .exp-org{font-size:.85rem;color:var(--muted-on-black);margin-top:2px;}
+  .exp-date{font-size:.75rem;color:#888;white-space:nowrap;border:1px solid var(--line-on-black);padding:3px 10px;border-radius:100px;}
+  .exp-desc{font-size:.87rem;color:var(--muted-on-black);line-height:1.7;max-width:680px;}
+  .exp-badge{
+    display:inline-block;margin-top:10px;font-size:.72rem;font-weight:600;
+    border:1px solid var(--line-on-black);padding:3px 10px;border-radius:100px;color:#fff;
+  }
+
+  /* PROJECT FILTERS */
+  .filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+  .filter-btn{
+    border:1px solid var(--line-on-white);background:transparent;border-radius:100px;
+    padding:7px 16px;font-size:.8rem;font-weight:600;color:#444;cursor:pointer;transition:all .15s;
+  }
+  .filter-btn:hover{border-color:#999;}
+  .filter-btn.active{background:var(--black);color:#fff;border-color:var(--black);}
+
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .proj-card{
+    border:1px solid var(--line-on-white);border-radius:14px;padding:24px;
+    display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;
+    background:#fff;
+  }
+  .proj-card:hover{transform:translateY(-4px);border-color:#ccc;box-shadow:0 8px 24px rgba(0,0,0,.06);}
+  .proj-card.hidden-card{display:none;}
+  .proj-meta{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted-on-white);margin-bottom:10px;flex-wrap:wrap;gap:4px;}
+  .proj-badge{border:1px solid var(--line-on-white);padding:2px 9px;border-radius:100px;}
+  .proj-title{font-size:1rem;margin-bottom:12px;}
+  .proj-field{margin-bottom:10px;}
+  .proj-field .fk{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#999;font-weight:700;margin-bottom:3px;}
+  .proj-field .fv{font-size:.83rem;color:#333;line-height:1.6;}
+  .proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px;}
+  .proj-tag{font-size:.68rem;background:#f2f2f2;border-radius:100px;padding:3px 10px;color:#444;}
+  .proj-links{display:flex;gap:14px;margin-top:auto;padding-top:10px;}
+  .proj-links a{
+    font-size:.8rem;font-weight:600;text-decoration:none;color:var(--blue);
+    display:flex;align-items:center;gap:5px;
+  }
+  .proj-links a:hover{text-decoration:underline;}
+  .proj-links i{width:14px;height:14px;}
+
+  .expand-wrap{text-align:center;margin-top:36px;}
+  .expand-btn{
+    border:1px solid var(--line-on-white);background:#fff;border-radius:100px;
+    padding:12px 26px;font-size:.87rem;font-weight:600;cursor:pointer;
+    display:inline-flex;align-items:center;gap:8px;transition:all .15s;
+  }
+  .expand-btn:hover{border-color:var(--black);}
+  .expand-btn i{width:16px;height:16px;transition:transform .2s;}
+  .expand-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+  #moreProjects,#moreCerts{
+    display:none;margin-top:36px;
+  }
+  #moreProjects.shown,#moreCerts.shown{display:block;}
+
+  /* CERTIFICATIONS */
+  .cert-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;}
+  .cstat{
+    flex:1;min-width:110px;text-align:center;border:1px solid var(--line-on-black);border-radius:12px;padding:16px 10px;
+  }
+  .cstat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.5rem;}
+  .cstat span{font-size:.68rem;color:var(--muted-on-black);text-transform:uppercase;letter-spacing:.06em;}
+
+  .cert-featured{
+    display:flex;gap:18px;align-items:flex-start;border:1px solid var(--line-on-black);
+    border-radius:14px;padding:22px;margin-bottom:32px;background:#111;
+  }
+  .cert-featured .cf-ico{width:46px;height:46px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .cert-featured .cf-ico i{width:22px;height:22px;color:#fff;}
+  .cert-featured h3{font-size:1rem;margin-bottom:5px;}
+  .cert-featured p{font-size:.83rem;color:var(--muted-on-black);}
+  .cf-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+  .cf-tag{font-size:.68rem;border:1px solid var(--line-on-black);padding:2px 9px;border-radius:100px;color:#ddd;}
+  .cf-credly{margin-top:12px;display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--yellow);text-decoration:none;}
+  .cf-credly i{width:14px;height:14px;}
+
+  .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .cert-card{
+    border:1px solid var(--line-on-black);border-radius:12px;padding:16px;display:flex;gap:12px;align-items:flex-start;
+  }
+  .cc-ico{width:36px;height:36px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .cc-ico i{width:16px;height:16px;color:#fff;}
+  .cert-card h4{font-size:.82rem;margin-bottom:2px;}
+  .cert-card p{font-size:.72rem;color:var(--muted-on-black);}
+  .cert-card .ccdate{display:block;font-size:.68rem;color:#888;margin-top:3px;}
+  .cert-card.is-progress{border-style:dashed;}
+  .cc-badge{
+    display:inline-flex;align-items:center;gap:5px;font-size:.62rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--black);
+    background:var(--yellow);padding:2px 8px;border-radius:100px;margin-top:5px;
+  }
+  .cc-badge .dot{width:5px;height:5px;border-radius:50%;background:var(--black);display:inline-block;}
+
+  .cert-group{margin-bottom:32px;}
+  .cert-group:last-child{margin-bottom:0;}
+  .cert-group-label{
+    font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--muted-on-black);
+    margin-bottom:14px;display:flex;align-items:center;gap:10px;
+  }
+  .cert-group-label::after{content:'';flex:1;height:1px;background:var(--line-on-black);}
+
+  /* LEADERSHIP */
+  .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:44px;}
+  .lead-card{border:1px solid var(--line-on-white);border-radius:14px;padding:22px;}
+  .lead-ico{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+  .lead-ico i{width:18px;height:18px;color:#fff;}
+  .lead-card h4{font-size:.92rem;margin-bottom:4px;}
+  .lead-card .lorg{font-size:.78rem;color:var(--deep);font-weight:600;margin-bottom:6px;}
+  .lead-card .ldur{font-size:.72rem;color:#888;margin-bottom:10px;}
+  .lead-card p.ldesc{font-size:.82rem;color:#444;line-height:1.6;}
+  .philosophy{border:1px solid var(--line-on-white);border-radius:14px;padding:28px;background:#fafafa;}
+  .philosophy h3{font-size:1rem;margin-bottom:10px;}
+  .philosophy p{font-size:.92rem;color:#333;line-height:1.8;}
+
+  /* RESEARCH */
+  .research-card{border:1px solid var(--line-on-black);border-radius:14px;padding:28px;margin-bottom:20px;}
+  .research-card h3{font-size:1.1rem;margin-bottom:8px;}
+  .research-meta{font-size:.78rem;color:var(--muted-on-black);margin-bottom:16px;}
+  .research-card .fk{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#999;font-weight:700;margin-bottom:3px;margin-top:14px;}
+  .research-card .fv{font-size:.87rem;color:#ddd;line-height:1.7;}
+  .research-links{display:flex;gap:16px;margin-top:18px;}
+  .research-links a{font-size:.83rem;font-weight:600;color:var(--yellow);text-decoration:none;display:flex;align-items:center;gap:5px;}
+  .research-links a:hover{text-decoration:underline;}
+  .research-links i{width:14px;height:14px;}
+
+  /* CONTACT */
+  #contact{text-align:center;}
+  .contact-inner{max-width:640px;margin:0 auto;}
+  .contact-inner p.lead{font-size:1.05rem;color:#333;line-height:1.75;margin-bottom:38px;}
+  .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:8px;}
+  .contact-link{
+    display:flex;align-items:center;gap:9px;border:1px solid var(--line-on-white);border-radius:10px;
+    padding:13px 22px;text-decoration:none;color:var(--black);font-size:.87rem;font-weight:600;transition:all .15s;
+  }
+  .contact-link:hover{border-color:var(--black);transform:translateY(-2px);}
+  .contact-link i{width:16px;height:16px;}
+
+  footer{border-top:1px solid var(--line-on-white);padding:26px 0;background:var(--white);}
+  .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.78rem;color:#888;}
+  .footer-inner b{color:var(--black);}
+
+  @media(max-width:900px){
+    section{padding:64px 0;}
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .about-grid{grid-template-columns:1fr;}
+    .hl-grid,.proj-grid,.cert-grid,.lead-grid{grid-template-columns:1fr;}
+    .cert-featured{flex-direction:column;}
+  }
+  @media(max-width:600px){
+    .wrap{padding:0 20px;}
+    .hero-stats{gap:22px;}
+  }
+
+  /* ROLE SWITCHER */
+  .role-switcher{margin-bottom:26px;}
+  .role-switcher .rs-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--muted-on-white);margin-bottom:10px;}
+  .role-pills{display:flex;flex-wrap:wrap;gap:8px;}
+  .role-pill{
+    border:1px solid var(--line-on-white);background:transparent;border-radius:100px;
+    padding:7px 15px;font-size:.78rem;font-weight:600;color:#444;cursor:pointer;transition:all .15s;
+    font-family:'Inter',sans-serif;
+  }
+  .role-pill:hover{border-color:#999;}
+  .role-pill[aria-pressed="true"]{background:var(--black);color:#fff;border-color:var(--black);}
+  .view-all-wrap{text-align:center;margin-top:36px;}
+  .view-all-link{
+    border:1px solid var(--line-on-white);background:#fff;border-radius:100px;
+    padding:12px 26px;font-size:.87rem;font-weight:600;cursor:pointer;text-decoration:none;color:var(--black);
+    display:inline-flex;align-items:center;gap:8px;transition:all .15s;
+  }
+  .on-black .view-all-link{background:transparent;border-color:var(--line-on-black);color:#fff;}
+  .view-all-link:hover{border-color:var(--black);}
+  .on-black .view-all-link:hover{border-color:#fff;}
+  .view-all-link i{width:16px;height:16px;}
+  .fade-swap{animation:fadeSwap .35s ease;}
+  @keyframes fadeSwap{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand" aria-label="Priyanka Gandhi A, home"><span class="dot"></span>Priyanka Gandhi A</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <i data-lucide="menu"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HOME / HERO -->
+<section id="home" class="on-white" aria-label="Introduction">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill-tag"><span class="dotgreen"></span>Open to opportunities · 2026</div>
+
+      <div class="role-switcher">
+        <div class="rs-label">Viewing as</div>
+        <div class="role-pills" id="rolePills" role="group" aria-label="Switch recruiter view">
+          <button class="role-pill" data-role="general" aria-pressed="true">General</button>
+          <button class="role-pill" data-role="software">Software Engineering</button>
+          <button class="role-pill" data-role="tde">Test Development Engineer</button>
+          <button class="role-pill" data-role="embedded">Embedded Systems</button>
+          <button class="role-pill" data-role="ai">AI / ML</button>
+          <button class="role-pill" data-role="cloud">Cloud / SRE</button>
+          <button class="role-pill" data-role="pm">Technical Project Management</button>
+          <button class="role-pill" data-role="data">Data Analytics</button>
+        </div>
+      </div>
+
+      <h1 class="hero-headline" id="heroHeadline">Aspiring Technical<br>Project Manager</h1>
+      <div class="hero-accentline" id="heroAccentline">
+        <span>AI</span><span class="sep">•</span><span>Cloud</span><span class="sep">•</span><span>Software Engineering</span><span class="sep">•</span><span>Embedded Systems</span>
+      </div>
+      <p class="hero-tagline" id="heroTagline">Building practical solutions through continuous learning, collaboration, and real-world engineering projects.</p>
+      <p class="hero-name">Priyanka Gandhi A — ECE Graduate, Avinashilingam University '26</p>
+      <div class="hero-btns">
+        <a href="#highlights" class="btn btn-solid">View Highlights</a>
+        <a href="https://drive.google.com/drive/folders/1_rn7X8b39rxbYWPdIvgxMOX45mE2uko6?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline" id="resumeBtn" title="Opens a Google Drive folder with role-specific resumes"><i data-lucide="file-text" style="width:15px;height:15px;"></i>Resume</a>
+        <a href="https://linkedin.com/in/a-priyanka-gandhi-ece" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="linkedin" style="width:15px;height:15px;"></i>LinkedIn</a>
+        <a href="https://github.com/power-code129" target="_blank" rel="noopener" class="btn btn-outline"><i data-lucide="github" style="width:15px;height:15px;"></i>GitHub</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>2×</b><span>IBM Internships</span></div>
+        <div class="hstat"><b>47+</b><span>Certifications</span></div>
+        <div class="hstat"><b>11</b><span>Engineering Projects</span></div>
+        <div class="hstat"><b>2</b><span>Google Cloud Facilitator Terms</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="journey-diagram" aria-label="Engineering learning journey">
+        <div class="jd-title">My learning journey</div>
+        <div class="jd-step">
+          <div class="jd-line"></div>
+          <div class="jd-dot" style="background:var(--red);"><i data-lucide="cpu"></i></div>
+          <div class="jd-label">Hardware</div>
+        </div>
+        <div class="jd-step">
+          <div class="jd-line"></div>
+          <div class="jd-dot" style="background:var(--yellow);"><i data-lucide="chip"></i></div>
+          <div class="jd-label">Embedded Systems</div>
+        </div>
+        <div class="jd-step">
+          <div class="jd-line"></div>
+          <div class="jd-dot" style="background:var(--green);"><i data-lucide="code-2"></i></div>
+          <div class="jd-label">Software Engineering</div>
+        </div>
+        <div class="jd-step">
+          <div class="jd-line"></div>
+          <div class="jd-dot" style="background:var(--blue);"><i data-lucide="cloud"></i></div>
+          <div class="jd-label">Cloud Computing</div>
+        </div>
+        <div class="jd-step">
+          <div class="jd-line"></div>
+          <div class="jd-dot" style="background:var(--red);"><i data-lucide="brain-circuit"></i></div>
+          <div class="jd-label">AI / Machine Learning</div>
+        </div>
+        <div class="jd-step">
+          <div class="jd-line"></div>
+          <div class="jd-dot" style="background:var(--yellow);"><i data-lucide="server-cog"></i></div>
+          <div class="jd-label">SRE / DevOps</div>
+        </div>
+        <div class="jd-step">
+          <div class="jd-dot" style="background:var(--green);"><i data-lucide="briefcase"></i></div>
+          <div class="jd-label">Technical Project Management</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED HIGHLIGHTS -->
+<section id="highlights" class="on-black" aria-label="Featured highlights">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>At a glance</div>
+    <h2 class="sec-title">Featured Highlights</h2>
+    <div class="hl-grid" id="hlGrid">
+      <div class="hl-card" data-key="ibm">
+        <div class="hl-ico" style="background:var(--blue);"><i data-lucide="users"></i></div>
+        <h3>IBM India — Two Internships</h3>
+        <p>AI and Data Science intern across 2023–24, shipping a Random Forest classifier (77%) and a Naive Bayes sentiment model (86% accuracy).</p>
+      </div>
+      <div class="hl-card" data-key="oci">
+        <div class="hl-ico" style="background:var(--red);"><i data-lucide="cloud"></i></div>
+        <h3>Oracle Cloud Infrastructure Certified</h3>
+        <p>OCI 2025 Certified Foundations Associate — verified credential, valid through April 2028.</p>
+      </div>
+      <div class="hl-card" data-key="arcade">
+        <div class="hl-ico" style="background:var(--yellow);"><i data-lucide="server-cog"></i></div>
+        <h3>Google Cloud Arcade Facilitator</h3>
+        <p>Two terms mentoring peers across GCP, BigQuery, and Firebase — now leading a larger cohort in an upgraded role.</p>
+      </div>
+      <div class="hl-card" data-key="systolic">
+        <div class="hl-ico" style="background:var(--green);"><i data-lucide="cpu"></i></div>
+        <h3>Adaptive Systolic Architecture</h3>
+        <p>FPGA-based energy-efficient ML accelerator for edge AI, built with dual-radix arithmetic in Xilinx Vivado.</p>
+      </div>
+      <div class="hl-card" data-key="mediguard">
+        <div class="hl-ico" style="background:var(--blue);"><i data-lucide="siren"></i></div>
+        <h3>MediGuard — Hackathon Build</h3>
+        <p>IoT temperature-protection system for medicines, built at a 36-hour national hackathon with IEEE & IETE.</p>
+      </div>
+      <div class="hl-card" data-key="pmcert">
+        <div class="hl-ico" style="background:var(--red);"><i data-lucide="briefcase"></i></div>
+        <h3>Project Management Professional Certificate</h3>
+        <p>IBM-issued PMP-track certification, paired with McKinsey.org's Forward Program in structured problem-solving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="on-white" aria-label="About">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>Who I am</div>
+    <h2 class="sec-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>I'm an <strong>Electronics and Communication Engineering</strong> graduate who moves comfortably between hardware and software. My path runs from circuits and FPGAs through embedded systems and cloud into AI/ML — and now toward technical program and project leadership.</p>
+        <p>Two internships at <strong>IBM India</strong> gave me hands-on experience shipping ML models, while FPGA, IoT, and PCB design projects kept my engineering fundamentals sharp. I currently facilitate <strong>Google Cloud Arcade</strong> cohorts and completed <strong>McKinsey.org's Forward Program</strong> in structured problem-solving.</p>
+        <p>I hold an <strong>Oracle Cloud Infrastructure</strong> certification and I'm preparing for <strong>GATE ECE 2027</strong> while pursuing full-time roles that blend engineering depth with cross-team coordination.</p>
+      </div>
+      <div>
+        <div class="quickcard">
+          <h4>Quick Info</h4>
+          <div class="qrow"><span class="k">Email</span><span class="v">2004apgandhi@gmail.com</span></div>
+          <div class="qrow"><span class="k">University</span><span class="v">Avinashilingam Univ.</span></div>
+          <div class="qrow"><span class="k">Graduation</span><span class="v">2026</span></div>
+          <div class="qrow"><span class="k">CGPA</span><span class="v">8.25</span></div>
+          <div class="qrow"><span class="k">Location</span><span class="v">Coimbatore, India</span></div>
+        </div>
+        <div class="quickcard">
+          <h4>Communities</h4>
+          <div class="qrow"><span class="k">GDG Coimbatore</span><span class="v">Member</span></div>
+          <div class="qrow"><span class="k">Cloud Career Launchpad</span><span class="v">APAC</span></div>
+          <div class="qrow"><span class="k">IETE</span><span class="v">Student Member</span></div>
+          <div class="qrow"><span class="k">BIS</span><span class="v">Club Member</span></div>
+          <div class="qrow"><span class="k">NSS UPES</span><span class="v">Volunteer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNING JOURNEY -->
+<section id="journey" class="on-black" aria-label="Learning journey">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>How I got here</div>
+    <h2 class="sec-title">Learning Journey</h2>
+    <div class="timeline">
+      <div class="tl-year">
+        <div class="tl-dot" style="background:var(--red);"></div>
+        <div class="tl-year-label">2023</div>
+        <div class="tl-items">
+          <div class="tl-item"><b>AI Intern, IBM India</b> — built a Random Forest classifier at 77% accuracy.</div>
+          <div class="tl-item">Joined <b>IETE</b> as a student member and began volunteering with <b>NSS UPES</b>.</div>
+          <div class="tl-item">Completed foundational virtual-experience programs with AWS, HPE, and Accenture, plus Azure Data Fundamentals.</div>
+        </div>
+      </div>
+      <div class="tl-year">
+        <div class="tl-dot" style="background:var(--yellow);"></div>
+        <div class="tl-year-label">2024</div>
+        <div class="tl-items">
+          <div class="tl-item"><b>Data Science Intern, IBM India</b> — shipped a sentiment classifier at 86% accuracy.</div>
+          <div class="tl-item">Built the <b>IoT Patient Monitoring System</b> with ESP32, and joined <b>BIS</b> as a club member.</div>
+          <div class="tl-item">Graphic design &amp; digital marketing internship at GAO Tek Inc.; completed NPTEL Cloud Computing.</div>
+        </div>
+      </div>
+      <div class="tl-year">
+        <div class="tl-dot" style="background:var(--green);"></div>
+        <div class="tl-year-label">2025</div>
+        <div class="tl-items">
+          <div class="tl-item">Became a <b>Google Cloud Arcade Facilitator</b> and joined <b>GDG Coimbatore</b> and the Cloud Career Launchpad (APAC).</div>
+          <div class="tl-item">Started the <b>Adaptive Systolic Architecture</b> FPGA research project.</div>
+          <div class="tl-item">Independent builds: Traffic Controller (Verilog) and Astable Multivibrator PCB design.</div>
+        </div>
+      </div>
+      <div class="tl-year">
+        <div class="tl-dot" style="background:var(--blue);"></div>
+        <div class="tl-year-label">2026</div>
+        <div class="tl-items">
+          <div class="tl-item">Earned the <b>Oracle Cloud Infrastructure</b> Certified Foundations Associate credential.</div>
+          <div class="tl-item">Built <b>MediGuard</b> at a national hackathon (Feb) and <b>TN Election Guide</b> at a Google Services Challenge (May, ranked 610/22,409).</div>
+          <div class="tl-item">Completed <b>McKinsey.org's Forward Program</b> and moved into an upgraded <b>Google Cloud Arcade Facilitator</b> role.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="on-white" aria-label="Skills">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>What I know</div>
+    <h2 class="sec-title">Skills</h2>
+
+    <div id="skillCatGrid">
+    <div class="skill-cat" data-key="programming">
+      <div class="skill-cat-head"><i data-lucide="terminal" style="color:var(--blue);"></i><h3>Programming</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Python</div><div class="cevidence">IBM internships, ML models</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>C / C++</div><div class="cevidence">Bharathidasan Univ. certified</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>C#</div><div class="cevidence">freeCodeCamp certified</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>JavaScript</div><div class="cevidence">TN Election Guide project</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Verilog</div><div class="cevidence">Systolic Array & Traffic Controller</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>MATLAB</div><div class="cevidence">Antenna design coursework</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="software">
+      <div class="skill-cat-head"><i data-lucide="code-2" style="color:var(--green);"></i><h3>Software Engineering</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>Git / GitHub</div><div class="cevidence">Version control on every project</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>REST APIs</div><div class="cevidence">IMDb sentiment project</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>React.js</div><div class="cevidence">HackerRank certified, TN Election Guide</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>Node.js / FastAPI</div><div class="cevidence">TN Election Guide backend</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>Software Eng. Virtual Exp.</div><div class="cevidence">HackerRank & HPE certified</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="ai">
+      <div class="skill-cat-head"><i data-lucide="brain-circuit" style="color:var(--red);"></i><h3>AI / ML</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>NLP / BERT / TF-IDF</div><div class="cevidence">IMDb sentiment analysis, IBM</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Random Forest</div><div class="cevidence">77% accuracy, IBM AI internship</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Naive Bayes</div><div class="cevidence">86% accuracy, IBM Data Science internship</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Scikit-learn / IBM Watson</div><div class="cevidence">Model training & evaluation</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Generative AI</div><div class="cevidence">LinkedIn Learning certified</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Databricks</div><div class="cevidence">Kumaraguru Yugam workshop</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="cloud">
+      <div class="skill-cat-head"><i data-lucide="cloud" style="color:var(--blue);"></i><h3>Cloud</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Google Cloud Platform</div><div class="cevidence">Arcade Facilitator, 10+ labs</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Oracle Cloud Infrastructure</div><div class="cevidence">Certified Foundations Associate</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>AWS</div><div class="cevidence">Solution Architect virtual experience</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Microsoft Azure</div><div class="cevidence">Data Fundamentals certified</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Firebase</div><div class="cevidence">TN Election Guide project</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>BigQuery</div><div class="cevidence">GCP labs via Arcade</div></div>
+      </div>
+    </div>
+    </div>
+
+    <div class="view-all-wrap">
+      <a href="skills.html" class="view-all-link">View All Skills <i data-lucide="arrow-right"></i></a>
+    </div>
+
+    <div style="display:none;" id="hiddenSkillCatsHome">
+    <div class="skill-cat" data-key="sre">
+      <div class="skill-cat-head"><i data-lucide="server-cog" style="color:var(--yellow);"></i><h3>SRE / DevOps</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>Real-time Monitoring</div><div class="cevidence">IoT Patient Monitor, MediGuard</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>Alerting Systems</div><div class="cevidence">GSM & buzzer alerts, MediGuard</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>Cloud Reliability Foundations</div><div class="cevidence">Oracle OCI, GCP labs</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="hardware">
+      <div class="skill-cat-head"><i data-lucide="cpu" style="color:var(--green);"></i><h3>Hardware</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>Keysight ADS</div><div class="cevidence">Microwave circuit & antenna design cert</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>EasyEDA / LTspice</div><div class="cevidence">Astable Multivibrator PCB design</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>VLSI / DSP</div><div class="cevidence">Academic coursework & projects</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="embedded">
+      <div class="skill-cat-head"><i data-lucide="chip" style="color:var(--red);"></i><h3>Embedded Systems</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>ESP32 / Arduino</div><div class="cevidence">3 IoT projects, incl. MediGuard</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Microcontrollers</div><div class="cevidence">Temperature & Humidity Control</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Sensors (DHT11 / LM35)</div><div class="cevidence">IoT Patient Monitor, MediGuard</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="fpga">
+      <div class="skill-cat-head"><i data-lucide="grid-2x2" style="color:var(--blue);"></i><h3>FPGA</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Xilinx Vivado</div><div class="cevidence">Adaptive Systolic Architecture</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Verilog HDL</div><div class="cevidence">Systolic array, traffic controller FSM</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="iot">
+      <div class="skill-cat-head"><i data-lucide="wifi" style="color:var(--yellow);"></i><h3>IoT</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>Blynk IoT</div><div class="cevidence">Temperature & Humidity Control</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>GSM Modules</div><div class="cevidence">MediGuard alerts</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>NPTEL — Intro to IoT</div><div class="cevidence">Verified certificate</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="web">
+      <div class="skill-cat-head"><i data-lucide="globe" style="color:var(--green);"></i><h3>Web</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>HTML / React</div><div class="cevidence">TN Election Guide</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>Streamlit</div><div class="cevidence">IMDb sentiment analysis UI</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--green);"></span>Tailwind CSS</div><div class="cevidence">Web project styling</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="databases">
+      <div class="skill-cat-head"><i data-lucide="database" style="color:var(--red);"></i><h3>Databases</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>SQL / BigQuery</div><div class="cevidence">GCP labs, data projects</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--red);"></span>Postgres</div><div class="cevidence">POSETTE 2024, Microsoft Reactor</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="tools">
+      <div class="skill-cat-head"><i data-lucide="wrench" style="color:var(--blue);"></i><h3>Tools</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Excel / Tableau</div><div class="cevidence">Data visualization</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Anaconda / Kaggle</div><div class="cevidence">ML experimentation</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--blue);"></span>Scilab</div><div class="cevidence">FM Radio Signal, Audio Tone Generator</div></div>
+      </div>
+    </div>
+
+    <div class="skill-cat" data-key="soft">
+      <div class="skill-cat-head"><i data-lucide="heart-handshake" style="color:var(--yellow);"></i><h3>Soft Skills</h3></div>
+      <div class="skill-chips">
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>Communication & Problem-Solving</div><div class="cevidence">McKinsey.org Forward Program</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>Mentoring</div><div class="cevidence">Google Cloud Arcade Facilitator</div></div>
+        <div class="chip"><div class="cname"><span class="dot" style="background:var(--yellow);"></span>Leadership</div><div class="cevidence">NCC, NSS, team projects</div></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="on-black" aria-label="Experience">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>Where I've worked</div>
+    <h2 class="sec-title">Experience</h2>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-dot" style="background:var(--blue);"></div>
+        <div class="exp-top">
+          <div><div class="exp-role">Google Cloud Arcade Facilitator</div><div class="exp-org">Google Cloud Arcade Facilitator Program</div></div>
+          <div class="exp-date">Jul 2026 – Present</div>
+        </div>
+        <p class="exp-desc">Returned for a second, elevated term — now mentoring a larger cohort and taking on greater ownership of session delivery across GCP services, AI/ML APIs, BigQuery, and Firebase.</p>
+        <span class="exp-badge">Upgraded Facilitator Role</span>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot" style="background:var(--red);"></div>
+        <div class="exp-top">
+          <div><div class="exp-role">Forward Program Participant</div><div class="exp-org">McKinsey.org</div></div>
+          <div class="exp-date">Apr 2026 – Jul 2026</div>
+        </div>
+        <p class="exp-desc">Selected for McKinsey.org's global Forward Program — building structured problem-solving, analytical thinking, communication, and teamwork through case-based learning.</p>
+        <span class="exp-badge">Upskilled</span>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot" style="background:var(--yellow);"></div>
+        <div class="exp-top">
+          <div><div class="exp-role">Google Cloud Arcade Facilitator</div><div class="exp-org">Google Cloud Arcade Facilitator Program</div></div>
+          <div class="exp-date">Aug 2025 – Feb 2026</div>
+        </div>
+        <p class="exp-desc">Mentored peers through GCP services and Qwiklabs, guiding students through cloud computing, AI/ML APIs, BigQuery, and Firebase as part of Google's official Arcade program.</p>
+        <span class="exp-badge">10+ GCP Labs Completed</span>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot" style="background:var(--green);"></div>
+        <div class="exp-top">
+          <div><div class="exp-role">Data Science Intern</div><div class="exp-org">IBM India Pvt. Ltd.</div></div>
+          <div class="exp-date">Jun 2024 – Jul 2024</div>
+        </div>
+        <p class="exp-desc">Built a Naive Bayes sentiment classifier achieving 86% accuracy. Performed NLP preprocessing, TF-IDF feature extraction, and model evaluation using IBM Watson and Scikit-learn.</p>
+        <span class="exp-badge">86% Model Accuracy</span>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot" style="background:var(--blue);"></div>
+        <div class="exp-top">
+          <div><div class="exp-role">Graphic Design Intern</div><div class="exp-org">GAO Tek Inc.</div></div>
+          <div class="exp-date">Dec 2023 – Jul 2024</div>
+        </div>
+        <p class="exp-desc">Designed 50+ marketing creatives, supporting branding work using Canva, Photoshop, and Figma.</p>
+        <span class="exp-badge">50+ Marketing Creatives</span>
+      </div>
+      <div class="exp-item">
+        <div class="exp-dot" style="background:var(--red);"></div>
+        <div class="exp-top">
+          <div><div class="exp-role">Artificial Intelligence Intern</div><div class="exp-org">IBM India Pvt. Ltd.</div></div>
+          <div class="exp-date">Aug 2023 – Oct 2023</div>
+        </div>
+        <p class="exp-desc">Developed a Random Forest model achieving 77% accuracy, exploring supervised learning, model tuning, and evaluation metrics with IBM AI tools and Python.</p>
+        <span class="exp-badge">77% Classification Accuracy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="on-white" aria-label="Projects">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>What I've built</div>
+    <h2 class="sec-title">Projects</h2>
+
+    <div class="filter-row" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="embedded">Embedded</button>
+      <button class="filter-btn" data-filter="hardware">Hardware</button>
+      <button class="filter-btn" data-filter="cloud">Cloud</button>
+      <button class="filter-btn" data-filter="software">Software</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+      <button class="filter-btn" data-filter="fpga">FPGA</button>
+      <button class="filter-btn" data-filter="pm">Project Management</button>
+    </div>
+
+    <div class="proj-grid" id="projGridTop">
+      <!-- Featured 1 -->
+      <div class="proj-card" data-cats="research fpga hardware">
+        <div class="proj-meta"><span class="proj-badge">Jul 2025 – Jun 2026</span><span class="proj-badge">Team of 4</span></div>
+        <h3 class="proj-title">Adaptive Systolic Architecture</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Edge AI accelerators need to be fast without burning a power budget FPGAs can't spare.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">Designed an adaptive systolic array with dual-radix arithmetic to cut power draw while keeping ML inference throughput on target.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Led Verilog architecture design and Vivado verification, working alongside Gopika PL, Supriya M, and Shalini T.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Hardware-level power optimization requires trade-offs that don't show up until synthesis — simulation alone isn't enough.</div></div>
+        <div class="proj-tags"><span class="proj-tag">FPGA</span><span class="proj-tag">Verilog</span><span class="proj-tag">Xilinx Vivado</span><span class="proj-tag">Edge AI</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+      <!-- Featured 2 -->
+      <div class="proj-card" data-cats="iot embedded hackathon">
+        <div class="proj-meta"><span class="proj-badge">Feb 2026</span><span class="proj-badge">Hackathon</span></div>
+        <h3 class="proj-title">MediGuard — Smart Medicine Temperature Monitor</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Temperature-sensitive medicines like vaccines and insulin spoil silently in rural healthcare settings with unreliable cold storage.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">Built an IoT system with DHT11/LM35 sensors, automated cooling via relay, and GSM + buzzer alerts when thresholds are breached.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Built the sensor and alerting pipeline in a 36-hour national hackathon with Monica Gandhi A and Swathi Govindarajan.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Designing for rural deployment means planning for intermittent connectivity from day one, not as an afterthought.</div></div>
+        <div class="proj-tags"><span class="proj-tag">IoT</span><span class="proj-tag">ESP32/Arduino</span><span class="proj-tag">GSM</span><span class="proj-tag">Healthcare</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/MediGuard-IoT-Based-Smart-Medicine-Temperature-Protection-System" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/MediGuard-IoT-Based-Smart-Medicine-Temperature-Protection-System" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+      <!-- Featured 3 -->
+      <div class="proj-card" data-cats="ai cloud software hackathon pm">
+        <div class="proj-meta"><span class="proj-badge">May 2026</span><span class="proj-badge">Rank 610 / 22,409</span></div>
+        <h3 class="proj-title">TN Election Guide</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Many first-time voters in Tamil Nadu don't understand the mechanics of EVMs, VVPAT, or how government is formed after an election.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">An AI-powered civic education platform with interactive learning modules, a chatbot assistant, myth-busting FAQs, and offline fallback support.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Coordinated feature scope and built the React front end and Gemini-powered chatbot integration under hackathon time pressure.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Scoping ruthlessly for a hackathon deadline is itself a project-management skill — cutting features early protected the core experience.</div></div>
+        <div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Gemini API</span><span class="proj-tag">Firebase</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/TN-Election-Guide" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://election-guide-2026.web.app/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+      <!-- Featured 4 -->
+      <div class="proj-card" data-cats="ai software">
+        <div class="proj-meta"><span class="proj-badge">May 2024 – Jun 2024</span><span class="proj-badge">IBM India</span></div>
+        <h3 class="proj-title">IMDb Sentiment & Emotion Analysis</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Manually reading through thousands of movie reviews to gauge audience sentiment doesn't scale.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">An NLP classifier combining BERT and TF-IDF, wrapped in a Streamlit UI with REST API integration, trained further using IBM Watson.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Built the model pipeline and UI with Reshma Sherin during an IBM internship placement.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Combining a classical approach (TF-IDF) with a transformer model gave more robust results than either alone.</div></div>
+        <div class="proj-tags"><span class="proj-tag">BERT</span><span class="proj-tag">TF-IDF</span><span class="proj-tag">Streamlit</span><span class="proj-tag">Python</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/IMDB-data" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/IMDB-data" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+      <!-- Featured 5 -->
+      <div class="proj-card" data-cats="iot embedded hardware">
+        <div class="proj-meta"><span class="proj-badge">Dec 2024 – May 2025</span><span class="proj-badge">Team of 3</span></div>
+        <h3 class="proj-title">IoT Patient Monitoring System</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Ward staff need continuous visibility into patient vitals without manual, periodic checks.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">Real-time healthcare parameter tracking built on ESP32, streaming vital signs to a live dashboard.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Designed the sensor-to-dashboard data pipeline with Puja S and Pavithra S.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Sensor noise handling mattered more for reliability than the dashboard UI itself.</div></div>
+        <div class="proj-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">IoT</span><span class="proj-tag">C++</span><span class="proj-tag">Healthcare</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/Patient-monitoring-system" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/Patient-monitoring-system" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+      <!-- Featured 6 -->
+      <div class="proj-card" data-cats="fpga hardware">
+        <div class="proj-meta"><span class="proj-badge">Mar – Apr 2025</span><span class="proj-badge">Team of 2</span></div>
+        <h3 class="proj-title">Traffic Controller (Verilog)</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Fixed-timing traffic signals don't adapt to changing intersection conditions.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">An intelligent traffic control system implemented as a finite state machine in Verilog HDL.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Designed the FSM and simulated timing behavior with Monica Gandhi A.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">State machine design forces you to enumerate every edge case up front — there's no patching it later in hardware.</div></div>
+        <div class="proj-tags"><span class="proj-tag">Verilog</span><span class="proj-tag">FSM</span><span class="proj-tag">Digital Design</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/Traffic-Controller" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/Traffic-Controller" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-all-wrap">
+      <a href="projects.html" class="view-all-link">View All Projects <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="on-black" aria-label="Certifications">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>What I've earned</div>
+    <h2 class="sec-title">Certifications</h2>
+
+    <div class="cert-featured">
+      <div class="cf-ico" style="background:var(--blue);"><i data-lucide="briefcase"></i></div>
+      <div>
+        <h3>Google Project Management Professional Certificate</h3>
+        <p>Google · via Coursera · Issued July 2026</p>
+        <div class="cf-meta">
+          <span class="cf-tag">7 Courses</span>
+          <span class="cf-tag">Project Initiation & Planning</span>
+          <span class="cf-tag">Agile Project Management</span>
+        </div>
+        <a href="https://coursera.org/verify/professional-cert/UHT3QKXBPJ1I" target="_blank" rel="noopener" class="cf-credly"><i data-lucide="award"></i>Verify on Coursera</a>
+      </div>
+    </div>
+
+    <div class="cert-featured">
+      <div class="cf-ico" style="background:var(--red);"><i data-lucide="cloud"></i></div>
+      <div>
+        <h3>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</h3>
+        <p>Oracle · Issued April 2026 · Expires April 2028</p>
+        <div class="cf-meta">
+          <span class="cf-tag">ID: 327217883OCI25FNDCFA</span>
+          <span class="cf-tag">Cloud Computing</span>
+          <span class="cf-tag">OCI Security & IAM</span>
+        </div>
+        <a href="https://www.credly.com/users/priyanka-gandhi-a.ece" target="_blank" rel="noopener" class="cf-credly"><i data-lucide="award"></i>View badge on Credly</a>
+      </div>
+    </div>
+
+    <div class="cert-stats">
+      <div class="cstat"><b>49+</b><span>Total Certs</span></div>
+      <div class="cstat"><b>8</b><span>IBM Badges</span></div>
+      <div class="cstat"><b>3</b><span>NPTEL</span></div>
+      <div class="cstat"><b>4</b><span>HackerRank</span></div>
+      <div class="cstat"><b>1</b><span>Oracle OCI</span></div>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card"><div class="cc-ico" style="background:var(--blue);"><i data-lucide="briefcase"></i></div><div><h4>Project Management Professional</h4><p>IBM</p><span class="ccdate">Sep 2023</span></div></div>
+      <div class="cert-card"><div class="cc-ico" style="background:var(--red);"><i data-lucide="brain-circuit"></i></div><div><h4>Machine Learning for Data Science</h4><p>IBM</p><span class="ccdate">Jun 2024</span></div></div>
+      <div class="cert-card"><div class="cc-ico" style="background:var(--green);"><i data-lucide="shield-check"></i></div><div><h4>Cloud Security Engineer Journey</h4><p>Google Cloud Community India</p><span class="ccdate">Nov 2023</span></div></div>
+      <div class="cert-card"><div class="cc-ico" style="background:var(--yellow);"><i data-lucide="cloud"></i></div><div><h4>Azure Data Fundamentals</h4><p>Microsoft</p><span class="ccdate">Oct 2023</span></div></div>
+      <div class="cert-card"><div class="cc-ico" style="background:var(--blue);"><i data-lucide="sparkles"></i></div><div><h4>What Is Generative AI?</h4><p>LinkedIn Learning</p><span class="ccdate">Aug 2023</span></div></div>
+      <div class="cert-card"><div class="cc-ico" style="background:var(--red);"><i data-lucide="graduation-cap"></i></div><div><h4>Forward Program</h4><p>McKinsey.org</p><span class="ccdate">Jun 2026</span></div></div>
+    </div>
+
+    <div class="view-all-wrap">
+      <a href="certifications.html" class="view-all-link">View All Certifications <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership" class="on-white" aria-label="Leadership">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>Giving back</div>
+    <h2 class="sec-title">Leadership</h2>
+    <div class="lead-grid">
+      <div class="lead-card">
+        <div class="lead-ico" style="background:var(--blue);"><i data-lucide="cloud"></i></div>
+        <h4>Google Cloud Arcade Facilitator</h4>
+        <div class="lorg">Google Cloud Arcade Program</div>
+        <div class="ldur">Aug 2025 – Present</div>
+        <p class="ldesc">Mentoring peers through GCP labs and cloud fundamentals across two terms, now in an upgraded facilitator role.</p>
+      </div>
+      <div class="lead-card">
+        <div class="lead-ico" style="background:var(--red);"><i data-lucide="users"></i></div>
+        <h4>GDG Coimbatore</h4>
+        <div class="lorg">Google Developer Groups</div>
+        <div class="ldur">Jan 2025 – Present</div>
+        <p class="ldesc">Active community member participating in tech talks, workshops, and Google technology events.</p>
+      </div>
+      <div class="lead-card">
+        <div class="lead-ico" style="background:var(--yellow);"><i data-lucide="radio-tower"></i></div>
+        <h4>IETE</h4>
+        <div class="lorg">Institution of Electronics & Telecom Engineers</div>
+        <div class="ldur">Sep 2023 – Present</div>
+        <p class="ldesc">Student member supporting technical events, seminars, and community initiatives in electronics and telecom.</p>
+      </div>
+      <div class="lead-card">
+        <div class="lead-ico" style="background:var(--green);"><i data-lucide="sprout"></i></div>
+        <h4>NSS UPES</h4>
+        <div class="lorg">National Service Scheme</div>
+        <div class="ldur">Sep 2022 – Jun 2026</div>
+        <p class="ldesc">Volunteered in Swachh Bharat drives, social rallies, and community awareness programs.</p>
+      </div>
+      <div class="lead-card">
+        <div class="lead-ico" style="background:var(--blue);"><i data-lucide="ruler"></i></div>
+        <h4>Bureau of Indian Standards</h4>
+        <div class="lorg">BIS Student Chapter</div>
+        <div class="ldur">Mar 2024 – Jun 2026</div>
+        <p class="ldesc">Club member promoting standards awareness and quality education within the institution.</p>
+      </div>
+      <div class="lead-card">
+        <div class="lead-ico" style="background:var(--red);"><i data-lucide="rocket"></i></div>
+        <h4>Google Cloud Career Launchpad</h4>
+        <div class="lorg">Career Launchpad — APAC</div>
+        <div class="ldur">Jun 2025 – Present</div>
+        <p class="ldesc">Member of Google's APAC career development program focused on cloud skills and career growth.</p>
+      </div>
+    </div>
+    <div class="philosophy">
+      <h3>Leadership Philosophy</h3>
+      <p>I lead the way I engineer — by understanding the whole system before touching a single piece of it. Whether that's mentoring a facilitator cohort through a GCP lab or coordinating a hackathon team against the clock, I try to make sure everyone knows the "why" behind the plan, not just the "what."</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="on-black" aria-label="Research">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dash"></span>Deeper work</div>
+    <h2 class="sec-title">Research</h2>
+    <div class="research-card">
+      <h3>Next-Gen Systolic Array with Dual-Radix Arithmetic for Low-Power ML Acceleration</h3>
+      <div class="research-meta">Avinashilingam University · Jul 2025 – Jun 2026 · With Gopika PL, Supriya M, Shalini T</div>
+      <div class="fk">Focus</div>
+      <div class="fv">Investigating adaptive systolic array architectures on FPGA to reduce power consumption in edge-AI inference workloads, using dual-radix arithmetic to cut redundant switching activity.</div>
+      <div class="fk">Method</div>
+      <div class="fv">Verilog HDL design implemented and verified in Xilinx Vivado, benchmarked for power and throughput against a conventional systolic array baseline.</div>
+      <div class="fk">Status</div>
+      <div class="fv">Ongoing academic research project, documented and open-sourced alongside a working demo.</div>
+      <div class="research-links">
+        <a href="https://github.com/power-code129/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+        <a href="https://power-code129.github.io/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+      </div>
+    </div>
+    <div class="research-card">
+      <h3>Microwave Circuits & Antenna Design</h3>
+      <div class="research-meta">Avinashilingam Institute · Certified Oct 2024</div>
+      <div class="fk">Focus</div>
+      <div class="fv">Coursework-based research into microwave circuit behavior and antenna design, using Keysight ADS and MATLAB for simulation.</div>
+      <div class="fk">Status</div>
+      <div class="fv">Completed coursework certification, applied alongside independent RF/DSP projects (FM radio signal simulation, audio tone synthesis).</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="on-white" aria-label="Contact">
+  <div class="wrap contact-inner">
+    <div class="eyebrow" style="justify-content:center;"><span class="dash"></span>Let's connect</div>
+    <h2 class="sec-title" style="margin-left:auto;margin-right:auto;">Open to Opportunities</h2>
+    <p class="lead">I'm looking for Technical Project Management, Cloud, AI/ML, or ECE-hybrid roles where engineering depth meets cross-team coordination. Always glad to connect with recruiters, collaborators, and fellow engineers.</p>
+    <div class="contact-links">
+      <a href="mailto:2004apgandhi@gmail.com" class="contact-link"><i data-lucide="mail"></i>Email</a>
+      <a href="https://linkedin.com/in/a-priyanka-gandhi-ece" target="_blank" rel="noopener" class="contact-link"><i data-lucide="linkedin"></i>LinkedIn</a>
+      <a href="https://github.com/power-code129" target="_blank" rel="noopener" class="contact-link"><i data-lucide="github"></i>GitHub</a>
+      <a href="https://www.credly.com/users/priyanka-gandhi-a.ece" target="_blank" rel="noopener" class="contact-link"><i data-lucide="award"></i>Credly</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>Built by <b>Priyanka Gandhi A</b> — ECE Final Year '26</div>
+    <div>Coimbatore, Tamil Nadu, India</div>
+  </div>
+</footer>
+
+<script>
+  // Init icons
+  if (window.lucide) { lucide.createIcons(); }
+  window.addEventListener('load', function(){ if (window.lucide) lucide.createIcons(); });
+
+  // Mobile nav toggle
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('mobile-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.classList.remove('mobile-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Active nav link on scroll
+  var sections = document.querySelectorAll('main section[id]');
+  var navA = document.querySelectorAll('.nav-links a');
+  var navObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        navA.forEach(function(a){
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(function(s){ navObserver.observe(s); });
+
+  // Project filters
+  var currentProjFilter = 'all';
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var allProjCards = document.querySelectorAll('.proj-card');
+  function applyProjectFilter(cat){
+    currentProjFilter = cat;
+    allProjCards.forEach(function(card){
+      var cats = (card.getAttribute('data-cats') || '').split(' ');
+      var show = cat === 'all' || cats.indexOf(cat) > -1;
+      card.classList.toggle('hidden-card', !show);
+    });
+  }
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyProjectFilter(btn.getAttribute('data-filter'));
+    });
+  });
+
+  /* ============ ROLE SWITCHER ============ */
+  var ROLE_CONTENT = {
+    general:  { h:"Aspiring Technical<br>Project Manager", accent:["AI","Cloud","Software Engineering","Embedded Systems"], tag:"Building practical solutions through continuous learning, collaboration, and real-world engineering projects." },
+    software: { h:"ECE Graduate |<br>Software Engineer", accent:["Python","React.js","REST APIs","Git / GitHub"], tag:"Shipping end-to-end software — from ML pipelines to full-stack web apps — on a strong engineering foundation." },
+    tde:      { h:"ECE Graduate |<br>Test &amp; Quality Engineer", accent:["Verification","Debugging","FSM Testing","Quality Assurance"], tag:"Bringing a hardware-verification mindset — precise and edge-case driven — into software testing and QA." },
+    embedded: { h:"ECE Graduate |<br>Embedded Systems Engineer", accent:["ESP32","FPGA","Verilog","PCB Design"], tag:"Building from the circuit up — sensors, microcontrollers, and FPGA-based systems that run reliably in the real world." },
+    ai:       { h:"ECE Graduate |<br>AI / ML Engineer", accent:["NLP","Scikit-learn","BERT","Generative AI"], tag:"Two IBM internships and several independent builds turning raw data into working ML models." },
+    cloud:    { h:"ECE Graduate |<br>Cloud / SRE Engineer", accent:["Google Cloud","Oracle OCI","Microsoft Azure","Reliability"], tag:"Google Cloud Arcade Facilitator with hands-on GCP, OCI, and Azure experience, focused on reliable systems." },
+    pm:       { h:"Aspiring Technical<br>Project Manager", accent:["Google PM Certified","Agile","Cross-team Coordination","Engineering Depth"], tag:"Google PM Certified with real engineering depth — coordinating cross-functional teams from hardware to cloud." },
+    data:     { h:"ECE Graduate |<br>Data Analytics", accent:["SQL","BigQuery","Tableau","Data Visualization"], tag:"Turning raw data into decisions — from BigQuery pipelines to Tableau dashboards and ML-driven insights." }
+  };
+
+  var ROLE_SKILL_ORDER = {
+    general:  ["programming","software","ai","cloud"],
+    software: ["software","programming","web","databases"],
+    tde:      ["software","programming","tools","sre"],
+    embedded: ["embedded","hardware","fpga","iot"],
+    ai:       ["ai","programming","cloud","databases"],
+    cloud:    ["cloud","sre","databases","programming"],
+    pm:       ["software","cloud","ai","soft"],
+    data:     ["ai","databases","cloud","tools"]
+  };
+
+  var ROLE_PROJECT_PRIORITY = {
+    general:  ["pm","ai","embedded","cloud","software","research","iot","hardware","fpga","hackathon"],
+    software: ["software","ai","cloud","pm","research","hackathon","embedded","iot","hardware","fpga"],
+    tde:      ["software","research","hardware","embedded","fpga","ai","cloud","iot","pm","hackathon"],
+    embedded: ["embedded","iot","hardware","fpga","research","ai","cloud","software","pm","hackathon"],
+    ai:       ["ai","research","cloud","software","pm","embedded","iot","hardware","fpga","hackathon"],
+    cloud:    ["cloud","software","ai","pm","research","embedded","iot","hardware","fpga","hackathon"],
+    pm:       ["pm","hackathon","ai","cloud","software","research","embedded","iot","hardware","fpga"],
+    data:     ["ai","research","software","cloud","pm","embedded","iot","hardware","fpga","hackathon"]
+  };
+
+  var ROLE_HL_PRIORITY = {
+    general:  ["ibm","oci","arcade","systolic","mediguard","pmcert"],
+    software: ["ibm","arcade","oci","systolic","mediguard","pmcert"],
+    tde:      ["ibm","systolic","mediguard","oci","arcade","pmcert"],
+    embedded: ["systolic","mediguard","oci","ibm","arcade","pmcert"],
+    ai:       ["ibm","systolic","oci","arcade","mediguard","pmcert"],
+    cloud:    ["oci","arcade","ibm","systolic","mediguard","pmcert"],
+    pm:       ["pmcert","arcade","ibm","mediguard","oci","systolic"],
+    data:     ["ibm","oci","arcade","systolic","mediguard","pmcert"]
+  };
+
+  var heroHeadline = document.getElementById('heroHeadline');
+  var heroAccentline = document.getElementById('heroAccentline');
+  var heroTagline = document.getElementById('heroTagline');
+  var rolePills = document.querySelectorAll('.role-pill');
+  var hlGrid = document.getElementById('hlGrid');
+  var skillCatGrid = document.getElementById('skillCatGrid');
+  var hiddenSkillCats = document.getElementById('hiddenSkillCatsHome');
+  var projGridTop = document.getElementById('projGridTop');
+
+  function reorderByPriority(container, priorityList, allKey){
+    var items = Array.prototype.slice.call(container.querySelectorAll('[data-key]'));
+    items.sort(function(a, b){
+      var ai = priorityList.indexOf(a.getAttribute('data-key'));
+      var bi = priorityList.indexOf(b.getAttribute('data-key'));
+      if (ai === -1) ai = 999;
+      if (bi === -1) bi = 999;
+      return ai - bi;
+    });
+    items.forEach(function(el){ container.appendChild(el); el.classList.add('fade-swap'); });
+  }
+
+  function reorderProjects(role){
+    var priority = ROLE_PROJECT_PRIORITY[role] || ROLE_PROJECT_PRIORITY.general;
+    var cards = Array.prototype.slice.call(projGridTop.querySelectorAll('.proj-card'));
+    cards.sort(function(a, b){
+      var aCats = (a.getAttribute('data-cats') || '').split(' ');
+      var bCats = (b.getAttribute('data-cats') || '').split(' ');
+      var aScore = Math.min.apply(null, aCats.map(function(c){ var i = priority.indexOf(c); return i === -1 ? 999 : i; }).concat([999]));
+      var bScore = Math.min.apply(null, bCats.map(function(c){ var i = priority.indexOf(c); return i === -1 ? 999 : i; }).concat([999]));
+      return aScore - bScore;
+    });
+    cards.forEach(function(el){ projGridTop.appendChild(el); el.classList.add('fade-swap'); });
+  }
+
+  function reorderSkillsHome(role){
+    var order = ROLE_SKILL_ORDER[role] || ROLE_SKILL_ORDER.general;
+    var pool = Array.prototype.slice.call(skillCatGrid.querySelectorAll('.skill-cat'))
+      .concat(Array.prototype.slice.call(hiddenSkillCats.querySelectorAll('.skill-cat')));
+    var top4 = [];
+    order.forEach(function(key){
+      var found = pool.find(function(el){ return el.getAttribute('data-key') === key; });
+      if (found) top4.push(found);
+    });
+    pool.forEach(function(el){
+      if (top4.indexOf(el) === -1) { hiddenSkillCats.appendChild(el); }
+    });
+    top4.forEach(function(el){ skillCatGrid.appendChild(el); el.classList.add('fade-swap'); });
+  }
+
+  function setRole(role){
+    var c = ROLE_CONTENT[role] || ROLE_CONTENT.general;
+    heroHeadline.innerHTML = c.h;
+    heroHeadline.classList.add('fade-swap');
+    heroTagline.textContent = c.tag;
+    heroTagline.classList.add('fade-swap');
+    heroAccentline.innerHTML = c.accent.map(function(a){ return '<span>' + a + '</span>'; }).join('<span class="sep">•</span>');
+    heroAccentline.classList.add('fade-swap');
+
+    reorderByPriority(hlGrid, ROLE_HL_PRIORITY[role] || ROLE_HL_PRIORITY.general);
+    reorderSkillsHome(role);
+    reorderProjects(role);
+
+    rolePills.forEach(function(p){ p.setAttribute('aria-pressed', p.getAttribute('data-role') === role ? 'true' : 'false'); });
+
+    setTimeout(function(){
+      [heroHeadline, heroTagline, heroAccentline].forEach(function(el){ el.classList.remove('fade-swap'); });
+    }, 400);
+  }
+
+  rolePills.forEach(function(btn){
+    btn.addEventListener('click', function(){ setRole(btn.getAttribute('data-role')); });
+  });
+</script>
+</body>
+</html>

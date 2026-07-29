@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects — Priyanka Gandhi A</title>
+<meta name="description" content="Full project portfolio of Priyanka Gandhi A — ECE graduate spanning embedded systems, AI/ML, cloud, and software engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%230a0a0a%27/%3E%3Ctext x=%2750%27 y=%2766%27 font-family=%27Arial,Helvetica,sans-serif%27 font-size=%2748%27 font-weight=%27700%27 fill=%27%234285F4%27 text-anchor=%27middle%27%3EPG%3C/text%3E%3C/svg%3E">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<style>
+  :root{
+    --blue:#4285F4;
+    --red:#EA4335;
+    --yellow:#FBBC05;
+    --green:#34A853;
+    --deep:#174EA6;
+    --white:#ffffff;
+    --black:#0a0a0a;
+    --line-on-white:#e4e4e4;
+    --line-on-black:#2a2a2a;
+    --muted-on-white:#5b5b5b;
+    --muted-on-black:#a8a8a8;
+    --radius:10px;
+    --maxw:1160px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+  body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--white);
+    color:var(--black);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    line-height:1.15;
+    letter-spacing:-0.02em;
+    margin:0;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;}
+  button{font-family:inherit;}
+
+  .skip-link{
+    position:absolute;left:-999px;top:0;background:var(--black);color:var(--white);
+    padding:10px 16px;z-index:1000;border-radius:0 0 8px 0;font-size:.85rem;
+  }
+  .skip-link:focus{left:0;}
+
+  :focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  section{padding:96px 0;}
+  .on-white{background:var(--white);color:var(--black);}
+  .on-black{background:var(--black);color:var(--white);}
+
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  .eyebrow .dash{width:26px;height:2px;background:var(--blue);display:inline-block;}
+  .on-black .eyebrow .dash{background:var(--yellow);}
+  .on-white .eyebrow{color:var(--muted-on-white);}
+  .on-black .eyebrow{color:var(--muted-on-black);}
+
+  .sec-title{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:44px;max-width:720px;}
+
+  /* NAV */
+  header.nav{
+    position:sticky;top:0;z-index:500;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line-on-white);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:0 28px;
+    display:flex;align-items:center;justify-content:space-between;height:64px;
+  }
+  .brand{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;
+    display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--black);
+  }
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--blue);display:inline-block;}
+  .nav-links{
+    list-style:none;display:flex;gap:2px;align-items:center;
+  }
+  .nav-links a{
+    text-decoration:none;color:#444;font-size:.85rem;font-weight:500;
+    padding:9px 12px;border-radius:8px;transition:background .15s,color .15s;
+    white-space:nowrap;
+  }
+  .nav-links a:hover{background:#f2f2f2;color:var(--black);}
+  .nav-links a.active{color:var(--blue);}
+  .nav-toggle{
+    display:none;background:none;border:1px solid var(--line-on-white);border-radius:8px;
+    width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer;
+  }
+  @media(max-width:1080px){
+    .nav-links{display:none;}
+    .nav-toggle{display:flex;}
+    .nav-links.mobile-open{
+      display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;
+      background:var(--white);border-bottom:1px solid var(--line-on-white);padding:8px;gap:0;
+    }
+    .nav-links.mobile-open a{padding:12px 14px;width:100%;}
+  }
+
+  /* HERO */
+  #home{padding-top:64px;padding-bottom:80px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+    padding-top:64px;
+  }
+  .pill-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--line-on-white);border-radius:100px;padding:6px 14px;
+    font-size:.78rem;font-weight:600;color:#333;margin-bottom:22px;
+  }
+  .pill-tag .dotgreen{width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .hero-headline{font-size:clamp(2rem,4.4vw,3.4rem);}
+  .hero-accentline{
+    margin-top:16px;font-size:.95rem;font-weight:600;letter-spacing:.02em;color:var(--deep);
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  }
+  .hero-accentline .sep{color:#bbb;font-weight:400;}
+  .hero-tagline{margin-top:22px;font-size:1.05rem;color:var(--muted-on-white);max-width:540px;line-height:1.7;}
+  .hero-name{margin-top:8px;font-size:1rem;color:#777;font-weight:500;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:8px;font-size:.88rem;font-weight:600;
+    text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s,background .15s,border-color .15s;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-solid{background:var(--black);color:var(--white);}
+  .btn-solid:hover{background:#222;}
+  .btn-outline{background:transparent;border-color:var(--line-on-white);color:var(--black);}
+  .btn-outline:hover{border-color:var(--black);}
+  .on-black .btn-outline{border-color:var(--line-on-black);color:var(--white);}
+  .on-black .btn-outline:hover{border-color:var(--white);}
+
+  .hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap;}
+  .hstat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;}
+  .hstat span{font-size:.72rem;color:var(--muted-on-white);text-transform:uppercase;letter-spacing:.06em;}
+
+  /* Journey diagram (hero) */
+  .journey-diagram{
+    border:1px solid var(--line-on-white);border-radius:16px;padding:26px 22px;background:#fafafa;
+  }
+  .jd-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-on-white);font-weight:700;margin-bottom:18px;}
+  .jd-step{display:flex;align-items:center;gap:14px;position:relative;padding:10px 0;}
+  .jd-step .jd-dot{
+    width:34px;height:34px;border-radius:50%;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;color:#fff;
+  }
+  .jd-step .jd-dot i{width:16px;height:16px;}
+  .jd-step .jd-label{font-weight:600;font-size:.92rem;}
+  .jd-line{
+    position:absolute;left:17px;top:44px;bottom:-10px;width:2px;background:var(--line-on-white);
+  }
+  .jd-step:last-child .jd-line{display:none;}
+
+  /* HIGHLIGHTS */
+  .hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .hl-card{
+    border:1px solid var(--line-on-black);border-radius:14px;padding:26px;
+    background:#111;transition:transform .2s,border-color .2s;
+  }
+  .hl-card:hover{transform:translateY(-4px);border-color:#444;}
+  .hl-ico{
+    width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+  }
+  .hl-ico i{width:20px;height:20px;color:#fff;}
+  .hl-card h3{font-size:1.02rem;margin-bottom:8px;}
+  .hl-card p{font-size:.85rem;color:var(--muted-on-black);line-height:1.6;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:56px;align-items:start;}
+  .about-copy p{font-size:1rem;color:#333;line-height:1.85;margin-bottom:14px;}
+  .about-copy strong{color:var(--black);font-weight:700;}
+  .quickcard{border:1px solid var(--line-on-white);border-radius:14px;padding:22px;margin-bottom:16px;}
+  .quickcard h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-on-white);margin-bottom:14px;}
+  .qrow{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line-on-white);font-size:.86rem;}
+  .qrow:last-child{border-bottom:none;}
+  .qrow .k{color:var(--muted-on-white);}
+  .qrow .v{font-weight:600;text-align:right;}
+
+  /* JOURNEY TIMELINE */
+  .timeline{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line-on-black);margin-left:6px;}
+  .tl-year{position:relative;padding:0 0 44px 34px;}
+  .tl-year:last-child{padding-bottom:0;}
+  .tl-dot{
+    position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;
+  }
+  .tl-year-label{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:14px;}
+  .tl-items{display:flex;flex-direction:column;gap:10px;}
+  .tl-item{font-size:.9rem;color:var(--muted-on-black);line-height:1.6;padding-left:2px;}
+  .tl-item b{color:#fff;font-weight:600;}
+
+  /* SKILLS */
+  .skill-cat{margin-bottom:38px;}
+  .skill-cat:last-child{margin-bottom:0;}
+  .skill-cat-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .skill-cat-head i{width:18px;height:18px;}
+  .skill-cat-head h3{font-size:1rem;}
+  .skill-chips{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{
+    border:1px solid var(--line-on-white);border-radius:10px;padding:10px 14px;
+    min-width:150px;transition:border-color .15s,transform .15s;
+  }
+  .chip:hover{border-color:#bbb;transform:translateY(-2px);}
+  .chip .cname{font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:7px;}
+  .chip .cname .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+  .chip .cevidence{font-size:.72rem;color:var(--muted-on-white);margin-top:4px;}
+
+  /* EXPERIENCE */
+  .exp-list{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line-on-black);margin-left:6px;}
+  .exp-item{position:relative;padding:0 0 34px 34px;}
+  .exp-item:last-child{padding-bottom:0;}
+  .exp-dot{position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;}
+  .exp-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;margin-bottom:6px;}
+  .exp-role{font-size:1.02rem;font-weight:700;}
+  .exp-org{font-size:.85rem;color:var(--muted-on-black);margin-top:2px;}
+  .exp-date{font-size:.75rem;color:#888;white-space:nowrap;border:1px solid var(--line-on-black);padding:3px 10px;border-radius:100px;}
+  .exp-desc{font-size:.87rem;color:var(--muted-on-black);line-height:1.7;max-width:680px;}
+  .exp-badge{
+    display:inline-block;margin-top:10px;font-size:.72rem;font-weight:600;
+    border:1px solid var(--line-on-black);padding:3px 10px;border-radius:100px;color:#fff;
+  }
+
+  /* PROJECT FILTERS */
+  .filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+  .filter-btn{
+    border:1px solid var(--line-on-white);background:transparent;border-radius:100px;
+    padding:7px 16px;font-size:.8rem;font-weight:600;color:#444;cursor:pointer;transition:all .15s;
+  }
+  .filter-btn:hover{border-color:#999;}
+  .filter-btn.active{background:var(--black);color:#fff;border-color:var(--black);}
+
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .proj-card{
+    border:1px solid var(--line-on-white);border-radius:14px;padding:24px;
+    display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;
+    background:#fff;
+  }
+  .proj-card:hover{transform:translateY(-4px);border-color:#ccc;box-shadow:0 8px 24px rgba(0,0,0,.06);}
+  .proj-card.hidden-card{display:none;}
+  .proj-meta{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted-on-white);margin-bottom:10px;flex-wrap:wrap;gap:4px;}
+  .proj-badge{border:1px solid var(--line-on-white);padding:2px 9px;border-radius:100px;}
+  .proj-title{font-size:1rem;margin-bottom:12px;}
+  .proj-field{margin-bottom:10px;}
+  .proj-field .fk{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#999;font-weight:700;margin-bottom:3px;}
+  .proj-field .fv{font-size:.83rem;color:#333;line-height:1.6;}
+  .proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px;}
+  .proj-tag{font-size:.68rem;background:#f2f2f2;border-radius:100px;padding:3px 10px;color:#444;}
+  .proj-links{display:flex;gap:14px;margin-top:auto;padding-top:10px;}
+  .proj-links a{
+    font-size:.8rem;font-weight:600;text-decoration:none;color:var(--blue);
+    display:flex;align-items:center;gap:5px;
+  }
+  .proj-links a:hover{text-decoration:underline;}
+  .proj-links i{width:14px;height:14px;}
+
+  .expand-wrap{text-align:center;margin-top:36px;}
+  .expand-btn{
+    border:1px solid var(--line-on-white);background:#fff;border-radius:100px;
+    padding:12px 26px;font-size:.87rem;font-weight:600;cursor:pointer;
+    display:inline-flex;align-items:center;gap:8px;transition:all .15s;
+  }
+  .expand-btn:hover{border-color:var(--black);}
+  .expand-btn i{width:16px;height:16px;transition:transform .2s;}
+  .expand-btn[aria-expanded="true"] i{transform:rotate(180deg);}
+  #moreProjects,#moreCerts{
+    display:none;margin-top:36px;
+  }
+  #moreProjects.shown,#moreCerts.shown{display:block;}
+
+  /* CERTIFICATIONS */
+  .cert-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;}
+  .cstat{
+    flex:1;min-width:110px;text-align:center;border:1px solid var(--line-on-black);border-radius:12px;padding:16px 10px;
+  }
+  .cstat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.5rem;}
+  .cstat span{font-size:.68rem;color:var(--muted-on-black);text-transform:uppercase;letter-spacing:.06em;}
+
+  .cert-featured{
+    display:flex;gap:18px;align-items:flex-start;border:1px solid var(--line-on-black);
+    border-radius:14px;padding:22px;margin-bottom:32px;background:#111;
+  }
+  .cert-featured .cf-ico{width:46px;height:46px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .cert-featured .cf-ico i{width:22px;height:22px;color:#fff;}
+  .cert-featured h3{font-size:1rem;margin-bottom:5px;}
+  .cert-featured p{font-size:.83rem;color:var(--muted-on-black);}
+  .cf-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+  .cf-tag{font-size:.68rem;border:1px solid var(--line-on-black);padding:2px 9px;border-radius:100px;color:#ddd;}
+  .cf-credly{margin-top:12px;display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--yellow);text-decoration:none;}
+  .cf-credly i{width:14px;height:14px;}
+
+  .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .cert-card{
+    border:1px solid var(--line-on-black);border-radius:12px;padding:16px;display:flex;gap:12px;align-items:flex-start;
+  }
+  .cc-ico{width:36px;height:36px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+  .cc-ico i{width:16px;height:16px;color:#fff;}
+  .cert-card h4{font-size:.82rem;margin-bottom:2px;}
+  .cert-card p{font-size:.72rem;color:var(--muted-on-black);}
+  .cert-card .ccdate{display:block;font-size:.68rem;color:#888;margin-top:3px;}
+  .cert-card.is-progress{border-style:dashed;}
+  .cc-badge{
+    display:inline-flex;align-items:center;gap:5px;font-size:.62rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--black);
+    background:var(--yellow);padding:2px 8px;border-radius:100px;margin-top:5px;
+  }
+  .cc-badge .dot{width:5px;height:5px;border-radius:50%;background:var(--black);display:inline-block;}
+
+  .cert-group{margin-bottom:32px;}
+  .cert-group:last-child{margin-bottom:0;}
+  .cert-group-label{
+    font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--muted-on-black);
+    margin-bottom:14px;display:flex;align-items:center;gap:10px;
+  }
+  .cert-group-label::after{content:'';flex:1;height:1px;background:var(--line-on-black);}
+
+  /* LEADERSHIP */
+  .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:44px;}
+  .lead-card{border:1px solid var(--line-on-white);border-radius:14px;padding:22px;}
+  .lead-ico{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+  .lead-ico i{width:18px;height:18px;color:#fff;}
+  .lead-card h4{font-size:.92rem;margin-bottom:4px;}
+  .lead-card .lorg{font-size:.78rem;color:var(--deep);font-weight:600;margin-bottom:6px;}
+  .lead-card .ldur{font-size:.72rem;color:#888;margin-bottom:10px;}
+  .lead-card p.ldesc{font-size:.82rem;color:#444;line-height:1.6;}
+  .philosophy{border:1px solid var(--line-on-white);border-radius:14px;padding:28px;background:#fafafa;}
+  .philosophy h3{font-size:1rem;margin-bottom:10px;}
+  .philosophy p{font-size:.92rem;color:#333;line-height:1.8;}
+
+  /* RESEARCH */
+  .research-card{border:1px solid var(--line-on-black);border-radius:14px;padding:28px;margin-bottom:20px;}
+  .research-card h3{font-size:1.1rem;margin-bottom:8px;}
+  .research-meta{font-size:.78rem;color:var(--muted-on-black);margin-bottom:16px;}
+  .research-card .fk{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:#999;font-weight:700;margin-bottom:3px;margin-top:14px;}
+  .research-card .fv{font-size:.87rem;color:#ddd;line-height:1.7;}
+  .research-links{display:flex;gap:16px;margin-top:18px;}
+  .research-links a{font-size:.83rem;font-weight:600;color:var(--yellow);text-decoration:none;display:flex;align-items:center;gap:5px;}
+  .research-links a:hover{text-decoration:underline;}
+  .research-links i{width:14px;height:14px;}
+
+  /* CONTACT */
+  #contact{text-align:center;}
+  .contact-inner{max-width:640px;margin:0 auto;}
+  .contact-inner p.lead{font-size:1.05rem;color:#333;line-height:1.75;margin-bottom:38px;}
+  .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:8px;}
+  .contact-link{
+    display:flex;align-items:center;gap:9px;border:1px solid var(--line-on-white);border-radius:10px;
+    padding:13px 22px;text-decoration:none;color:var(--black);font-size:.87rem;font-weight:600;transition:all .15s;
+  }
+  .contact-link:hover{border-color:var(--black);transform:translateY(-2px);}
+  .contact-link i{width:16px;height:16px;}
+
+  footer{border-top:1px solid var(--line-on-white);padding:26px 0;background:var(--white);}
+  .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.78rem;color:#888;}
+  .footer-inner b{color:var(--black);}
+
+  @media(max-width:900px){
+    section{padding:64px 0;}
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .about-grid{grid-template-columns:1fr;}
+    .hl-grid,.proj-grid,.cert-grid,.lead-grid{grid-template-columns:1fr;}
+    .cert-featured{flex-direction:column;}
+  }
+  @media(max-width:600px){
+    .wrap{padding:0 20px;}
+    .hero-stats{gap:22px;}
+  }
+
+  /* ROLE SWITCHER */
+  .role-switcher{margin-bottom:26px;}
+  .role-switcher .rs-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--muted-on-white);margin-bottom:10px;}
+  .role-pills{display:flex;flex-wrap:wrap;gap:8px;}
+  .role-pill{
+    border:1px solid var(--line-on-white);background:transparent;border-radius:100px;
+    padding:7px 15px;font-size:.78rem;font-weight:600;color:#444;cursor:pointer;transition:all .15s;
+    font-family:'Inter',sans-serif;
+  }
+  .role-pill:hover{border-color:#999;}
+  .role-pill[aria-pressed="true"]{background:var(--black);color:#fff;border-color:var(--black);}
+  .view-all-wrap{text-align:center;margin-top:36px;}
+  .view-all-link{
+    border:1px solid var(--line-on-white);background:#fff;border-radius:100px;
+    padding:12px 26px;font-size:.87rem;font-weight:600;cursor:pointer;text-decoration:none;color:var(--black);
+    display:inline-flex;align-items:center;gap:8px;transition:all .15s;
+  }
+  .on-black .view-all-link{background:transparent;border-color:var(--line-on-black);color:#fff;}
+  .view-all-link:hover{border-color:var(--black);}
+  .on-black .view-all-link:hover{border-color:#fff;}
+  .view-all-link i{width:16px;height:16px;}
+  .fade-swap{animation:fadeSwap .35s ease;}
+  @keyframes fadeSwap{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+</style>
+<style>
+  .page-header{padding:140px 0 60px;}
+  .page-header h1{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:14px;}
+  .page-header p{font-size:1rem;color:var(--muted-on-white);max-width:600px;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--muted-on-white);text-decoration:none;margin-bottom:22px;}
+  .back-link:hover{color:var(--black);}
+  .back-link i{width:14px;height:14px;}
+  .search-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+  .search-box{
+    flex:1;min-width:220px;border:1px solid var(--line-on-white);border-radius:10px;
+    padding:12px 16px;font-size:.9rem;font-family:'Inter',sans-serif;
+  }
+  .search-box:focus{outline:2px solid var(--blue);outline-offset:1px;}
+  .no-results{text-align:center;padding:60px 0;color:var(--muted-on-white);display:none;}
+  .no-results.shown{display:block;}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" aria-label="Priyanka Gandhi A, home"><span class="dot"></span>Priyanka Gandhi A</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+      <i data-lucide="menu"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#highlights">Highlights</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-header on-white">
+  <div class="wrap">
+    <a href="index.html" class="back-link"><i data-lucide="arrow-left"></i>Back to portfolio</a>
+    <div class="eyebrow"><span class="dash"></span>Full archive</div>
+    <h1>All Projects</h1>
+    <p>Every project I've built — embedded systems, FPGA, AI/ML, cloud, and full-stack software — with problem, solution, contribution, and lessons learned for each. 11 projects total.</p>
+  </div>
+</section>
+
+<section class="on-white" style="padding-top:0;">
+  <div class="wrap">
+    <div class="search-row">
+      <input type="text" class="search-box" id="projSearch" placeholder="Search projects by title, tech, or keyword…" aria-label="Search projects">
+    </div>
+    <div class="filter-row" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="embedded">Embedded</button>
+      <button class="filter-btn" data-filter="hardware">Hardware</button>
+      <button class="filter-btn" data-filter="cloud">Cloud</button>
+      <button class="filter-btn" data-filter="software">Software</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+      <button class="filter-btn" data-filter="fpga">FPGA</button>
+      <button class="filter-btn" data-filter="pm">Project Management</button>
+    </div>
+
+    <div class="proj-grid" id="projGridAll">
+<div class="proj-card" data-cats="research fpga hardware">
+        <div class="proj-meta"><span class="proj-badge">Jul 2025 – Jun 2026</span><span class="proj-badge">Team of 4</span></div>
+        <h3 class="proj-title">Adaptive Systolic Architecture</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Edge AI accelerators need to be fast without burning a power budget FPGAs can't spare.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">Designed an adaptive systolic array with dual-radix arithmetic to cut power draw while keeping ML inference throughput on target.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Led Verilog architecture design and Vivado verification, working alongside Gopika PL, Supriya M, and Shalini T.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Hardware-level power optimization requires trade-offs that don't show up until synthesis — simulation alone isn't enough.</div></div>
+        <div class="proj-tags"><span class="proj-tag">FPGA</span><span class="proj-tag">Verilog</span><span class="proj-tag">Xilinx Vivado</span><span class="proj-tag">Edge AI</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/Next-Gen-Systolic-Array-with-Dual-Radix-Arithmetic-for-Low-Power-ML-Acceleration" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+<div class="proj-card" data-cats="iot embedded hackathon">
+        <div class="proj-meta"><span class="proj-badge">Feb 2026</span><span class="proj-badge">Hackathon</span></div>
+        <h3 class="proj-title">MediGuard — Smart Medicine Temperature Monitor</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Temperature-sensitive medicines like vaccines and insulin spoil silently in rural healthcare settings with unreliable cold storage.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">Built an IoT system with DHT11/LM35 sensors, automated cooling via relay, and GSM + buzzer alerts when thresholds are breached.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Built the sensor and alerting pipeline in a 36-hour national hackathon with Monica Gandhi A and Swathi Govindarajan.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Designing for rural deployment means planning for intermittent connectivity from day one, not as an afterthought.</div></div>
+        <div class="proj-tags"><span class="proj-tag">IoT</span><span class="proj-tag">ESP32/Arduino</span><span class="proj-tag">GSM</span><span class="proj-tag">Healthcare</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/MediGuard-IoT-Based-Smart-Medicine-Temperature-Protection-System" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/MediGuard-IoT-Based-Smart-Medicine-Temperature-Protection-System" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+<div class="proj-card" data-cats="ai cloud software hackathon pm">
+        <div class="proj-meta"><span class="proj-badge">May 2026</span><span class="proj-badge">Rank 610 / 22,409</span></div>
+        <h3 class="proj-title">TN Election Guide</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Many first-time voters in Tamil Nadu don't understand the mechanics of EVMs, VVPAT, or how government is formed after an election.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">An AI-powered civic education platform with interactive learning modules, a chatbot assistant, myth-busting FAQs, and offline fallback support.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Coordinated feature scope and built the React front end and Gemini-powered chatbot integration under hackathon time pressure.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Scoping ruthlessly for a hackathon deadline is itself a project-management skill — cutting features early protected the core experience.</div></div>
+        <div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Gemini API</span><span class="proj-tag">Firebase</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/TN-Election-Guide" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://election-guide-2026.web.app/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+<div class="proj-card" data-cats="cloud">
+        <div class="proj-meta"><span class="proj-badge">2026</span><span class="proj-badge">Solo Project</span></div>
+        <h3 class="proj-title">AWS Deployment — Portfolio on S3</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Understanding how static hosting and cloud infrastructure actually work in production requires more than reading documentation — it needs a real, deployed project.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">Deployed this portfolio as a live static website using Amazon S3 Static Website Hosting, configuring bucket policies, public access settings, and static website endpoints end-to-end.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Independently configured the S3 bucket, set up static website hosting, managed permissions and access policies, and deployed and validated the live site in the ap-south-1 (Mumbai) region.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Cloud deployment is as much about permissions and access policies as it is about the code itself — getting the bucket policy right mattered more than the actual file upload.</div></div>
+        <div class="proj-tags"><span class="proj-tag">AWS</span><span class="proj-tag">S3</span><span class="proj-tag">Static Website Hosting</span><span class="proj-tag">Cloud Deployment</span></div>
+        <div class="proj-links">
+          <a href="http://priyanka-gandhi-cloud-portfolio-798350130221-ap-south-1-an.s3-website.ap-south-1.amazonaws.com/" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Live Demo</a>
+        </div>
+</div>      
+<div class="proj-card" data-cats="ai software">
+        <div class="proj-meta"><span class="proj-badge">May 2024 – Jun 2024</span><span class="proj-badge">IBM India</span></div>
+        <h3 class="proj-title">IMDb Sentiment & Emotion Analysis</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Manually reading through thousands of movie reviews to gauge audience sentiment doesn't scale.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">An NLP classifier combining BERT and TF-IDF, wrapped in a Streamlit UI with REST API integration, trained further using IBM Watson.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Built the model pipeline and UI with Reshma Sherin during an IBM internship placement.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Combining a classical approach (TF-IDF) with a transformer model gave more robust results than either alone.</div></div>
+        <div class="proj-tags"><span class="proj-tag">BERT</span><span class="proj-tag">TF-IDF</span><span class="proj-tag">Streamlit</span><span class="proj-tag">Python</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/IMDB-data" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/IMDB-data" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+<div class="proj-card" data-cats="iot embedded hardware">
+        <div class="proj-meta"><span class="proj-badge">Dec 2024 – May 2025</span><span class="proj-badge">Team of 3</span></div>
+        <h3 class="proj-title">IoT Patient Monitoring System</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Ward staff need continuous visibility into patient vitals without manual, periodic checks.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">Real-time healthcare parameter tracking built on ESP32, streaming vital signs to a live dashboard.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Designed the sensor-to-dashboard data pipeline with Puja S and Pavithra S.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Sensor noise handling mattered more for reliability than the dashboard UI itself.</div></div>
+        <div class="proj-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">IoT</span><span class="proj-tag">C++</span><span class="proj-tag">Healthcare</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/Patient-monitoring-system" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/Patient-monitoring-system" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+<div class="proj-card" data-cats="fpga hardware">
+        <div class="proj-meta"><span class="proj-badge">Mar – Apr 2025</span><span class="proj-badge">Team of 2</span></div>
+        <h3 class="proj-title">Traffic Controller (Verilog)</h3>
+        <div class="proj-field"><div class="fk">Problem</div><div class="fv">Fixed-timing traffic signals don't adapt to changing intersection conditions.</div></div>
+        <div class="proj-field"><div class="fk">Solution</div><div class="fv">An intelligent traffic control system implemented as a finite state machine in Verilog HDL.</div></div>
+        <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Designed the FSM and simulated timing behavior with Monica Gandhi A.</div></div>
+        <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">State machine design forces you to enumerate every edge case up front — there's no patching it later in hardware.</div></div>
+        <div class="proj-tags"><span class="proj-tag">Verilog</span><span class="proj-tag">FSM</span><span class="proj-tag">Digital Design</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/power-code129/Traffic-Controller" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://power-code129.github.io/Traffic-Controller" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+        </div>
+      </div>
+
+<div class="proj-card" data-cats="ai software">
+          <div class="proj-meta"><span class="proj-badge">Aug 2023 – Sep 2023</span><span class="proj-badge">IBM India</span></div>
+          <h3 class="proj-title">Restaurant Review Sentiment Analysis</h3>
+          <div class="proj-field"><div class="fk">Problem</div><div class="fv">Restaurants need a fast read on customer sentiment from raw review text.</div></div>
+          <div class="proj-field"><div class="fk">Solution</div><div class="fv">An end-to-end NLP pipeline with feature engineering and multiple ML models for classification.</div></div>
+          <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Built the preprocessing and feature-engineering pipeline independently during the IBM internship.</div></div>
+          <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Feature engineering had more impact on accuracy than swapping models.</div></div>
+          <div class="proj-tags"><span class="proj-tag">NLP</span><span class="proj-tag">Scikit-learn</span><span class="proj-tag">Python</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Sentimental-analysis-of-Restaurant-Management" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+            <a href="https://power-code129.github.io/Sentimental-analysis-of-Restaurant-Management" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+          </div>
+        </div>
+
+<div class="proj-card" data-cats="hardware">
+          <div class="proj-meta"><span class="proj-badge">Apr 2025</span></div>
+          <h3 class="proj-title">Astable Multivibrator — PCB Design</h3>
+          <div class="proj-field"><div class="fk">Problem</div><div class="fv">Timer and oscillator circuits need a reliable, manufacturable square-wave source.</div></div>
+          <div class="proj-field"><div class="fk">Solution</div><div class="fv">Designed and simulated an astable multivibrator in EasyEDA, laid out as a 2-layer PCB with through-hole components.</div></div>
+          <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Independent circuit design, simulation, and PCB layout, prepared for JLCPCB fabrication.</div></div>
+          <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Component tolerances matter far more on a real board than in simulation.</div></div>
+          <div class="proj-tags"><span class="proj-tag">EasyEDA</span><span class="proj-tag">PCB Design</span><span class="proj-tag">JLCPCB</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Astable-Multivibrator" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+            <a href="https://power-code129.github.io/Astable-Multivibrator" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+          </div>
+        </div>
+
+<div class="proj-card" data-cats="hardware research">
+          <div class="proj-meta"><span class="proj-badge">Sep 2024</span></div>
+          <h3 class="proj-title">Create Your Own FM Radio Signal</h3>
+          <div class="proj-field"><div class="fk">Problem</div><div class="fv">Understanding FM modulation conceptually is harder without a hands-on simulation.</div></div>
+          <div class="proj-field"><div class="fk">Solution</div><div class="fv">Simulated an FM radio station in Scilab — carrier wave modulation, audio resampling, FFT spectrum analysis, and playback validation.</div></div>
+          <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Independent build covering the full modulation-to-playback signal chain.</div></div>
+          <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">FFT analysis made modulation artifacts visible that pure time-domain plots hid.</div></div>
+          <div class="proj-tags"><span class="proj-tag">Scilab</span><span class="proj-tag">FM Modulation</span><span class="proj-tag">DSP</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Create-the-own-radio-signal" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+            <a href="https://power-code129.github.io/Create-the-own-radio-signal" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+          </div>
+        </div>
+
+<div class="proj-card" data-cats="hardware">
+          <div class="proj-meta"><span class="proj-badge">Sep 2024</span></div>
+          <h3 class="proj-title">Audio Tone Generator</h3>
+          <div class="proj-field"><div class="fk">Problem</div><div class="fv">Generating musical tones programmatically requires precise control over waveform synthesis.</div></div>
+          <div class="proj-field"><div class="fk">Solution</div><div class="fv">Sine wave synthesis in Scilab supporting single notes, octave scaling, chord combinations, and melody sequencing.</div></div>
+          <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Independent build of the synthesis and sequencing logic.</div></div>
+          <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Chord synthesis exposed how phase alignment affects perceived tone quality.</div></div>
+          <div class="proj-tags"><span class="proj-tag">Scilab</span><span class="proj-tag">DSP</span><span class="proj-tag">Audio Synthesis</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/Audio-Tone-generator" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+            <a href="https://power-code129.github.io/Audio-Tone-generator" target="_blank" rel="noopener"><i data-lucide="external-link"></i>Demo</a>
+          </div>
+        </div>
+
+<div class="proj-card" data-cats="iot embedded">
+          <div class="proj-meta"><span class="proj-badge">Nov 2023</span></div>
+          <h3 class="proj-title">Temperature & Humidity Control</h3>
+          <div class="proj-field"><div class="fk">Problem</div><div class="fv">Environments like server rooms or greenhouses need continuous, remote climate visibility.</div></div>
+          <div class="proj-field"><div class="fk">Solution</div><div class="fv">Real-time temperature and humidity monitoring using an ESP32 Wi-Fi module and DHT11 sensor, integrated with the Blynk IoT app.</div></div>
+          <div class="proj-field"><div class="fk">My Contribution</div><div class="fv">Independent build of the sensor circuit and Blynk dashboard integration.</div></div>
+          <div class="proj-field"><div class="fk">Lessons Learned</div><div class="fv">Cheap sensors need calibration routines — raw DHT11 readings drifted more than expected.</div></div>
+          <div class="proj-tags"><span class="proj-tag">ESP32</span><span class="proj-tag">DHT11</span><span class="proj-tag">Blynk IoT</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/power-code129/temperature-and-humidity-control" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          </div>
+        </div>
+    </div>
+    <p class="no-results" id="noResults">No projects match your search.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>Built by <b>Priyanka Gandhi A</b> — ECE Final Year '26</div>
+    <div>Coimbatore, Tamil Nadu, India</div>
+  </div>
+</footer>
+
+<script>
+  if (window.lucide) { lucide.createIcons(); }
+  window.addEventListener('load', function(){ if (window.lucide) lucide.createIcons(); });
+
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('mobile-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  var currentFilter = 'all';
+  var searchTerm = '';
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var allProjCards = document.querySelectorAll('.proj-card');
+  var noResults = document.getElementById('noResults');
+
+  function applyFilters(){
+    var visibleCount = 0;
+    allProjCards.forEach(function(card){
+      var cats = (card.getAttribute('data-cats') || '').split(' ');
+      var matchesFilter = currentFilter === 'all' || cats.indexOf(currentFilter) > -1;
+      var text = card.textContent.toLowerCase();
+      var matchesSearch = searchTerm === '' || text.indexOf(searchTerm) > -1;
+      var show = matchesFilter && matchesSearch;
+      card.classList.toggle('hidden-card', !show);
+      if (show) visibleCount++;
+    });
+    noResults.classList.toggle('shown', visibleCount === 0);
+  }
+
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentFilter = btn.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+
+  document.getElementById('projSearch').addEventListener('input', function(e){
+    searchTerm = e.target.value.toLowerCase();
+    applyFilters();
+  });
+</script>
+</body>
+</html>
